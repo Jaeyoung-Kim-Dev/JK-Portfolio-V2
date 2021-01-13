@@ -27,8 +27,8 @@ const HeroSection = () => {
         <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>I build WebSites</HeroH1>
-        <HeroP>My name is Jaeyoung Kim</HeroP>
+        <HeroH1>I Build WEBSITES</HeroH1>
+        <HeroP>My Name is JAEYOUNG KIM</HeroP>
         <HeroBtnWrapper>
           <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
             Contact{hover ? <ArrowForward /> : <ArrowRight />}

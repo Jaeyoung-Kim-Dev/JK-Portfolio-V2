@@ -27,7 +27,7 @@ const Services = () => {
         {services.map((service, key) => (
           <ServicesCard key={key}>
             <ServicesIcon
-              src={require(`../../images/${service.icon}.svg`)}
+              src={require(`../../images/${service.icon}.svg`)?.default}
               alt={service.title}
             />
             <ServicesH2>{service.title}</ServicesH2>

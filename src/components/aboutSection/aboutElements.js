@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-const backgroundDark = '#010606';
 const backgroundLight = '#f9f9f9';
 const topLine = '#01bf71';
 const headingDark = '#f7f8fa';
@@ -15,16 +14,16 @@ const btnTxtLight = '#fff';
 const btnBgHoverDark = '#fff';
 const btnBgHoverLight = '#01BF71';
 
-export const InfoContainer = styled.div`
+export const AboutContainer = styled.div`
   color: #fff;
-  background: ${({ isDark }) => (isDark ? backgroundDark : backgroundLight)};
+  background: ${backgroundLight};
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   } ;
 `;
 
-export const InfoWrapper = styled.div`
+export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 90vh;
@@ -36,17 +35,16 @@ export const InfoWrapper = styled.div`
   justify-content: center;
 `;
 
-export const InfoRow = styled.div`
+export const AboutRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
+  grid-template-areas: 'col2 col1';
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  } ;
+    imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+  } ; */
 `;
 
 export const Column1 = styled.div`
@@ -82,7 +80,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ isDark }) => (isDark ? headingDark : headingLight)};
+  color: ${headingLight};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -94,7 +92,7 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ isDark }) => (isDark ? subtitleDark : subtitleLight)};
+  color: ${subtitleLight};
 `;
 
 export const BtnWrap = styled.div`
@@ -104,10 +102,10 @@ export const BtnWrap = styled.div`
 
 export const Button = styled(Link)`
   border-radius: 50px;
-  background: ${({ isDark }) => (isDark ? btnBgDark : btnBgLight)};
+  background: ${btnBgLight};
   white-space: nowrap;
   padding: 12px 30px;
-  color: ${({ isDark }) => (isDark ? btnTxtDark : btnTxtLight)};
+  color: ${btnTxtLight};
   font-size: 16px;
   outline: none;
   border: none;
@@ -119,7 +117,7 @@ export const Button = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ isDark }) => (isDark ? btnBgHoverDark : btnBgHoverLight)};
+    background: ${btnBgHoverLight};
   }
 `;
 
