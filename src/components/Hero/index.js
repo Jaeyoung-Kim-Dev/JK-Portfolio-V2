@@ -14,7 +14,7 @@ import {
 import Video from '../../videos/video.mp4';
 // import { Button } from '../ButtonElements';
 
-const HeroSection = () => {
+const Hero = () => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -39,4 +39,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

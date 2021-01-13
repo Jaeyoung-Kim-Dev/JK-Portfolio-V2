@@ -9,20 +9,24 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  BtnWrap,
-  Button,
   Column2,
   ImgWrap,
   Img,
 } from './aboutElements';
 
-const AboutSection = () => {
+const About = () => {
   return (
     <>
-      <AboutContainer>
+      <AboutContainer id={'about'}>
         <AboutWrapper>
           <AboutRow>
             <Column1>
+              <ImgWrap>
+                {/* <Img src={img} alt={alt} /> */}
+                <Img src={require('../../images/me.jpg')?.default} alt={'me'} />
+              </ImgWrap>
+            </Column1>
+            <Column2>
               <TextWrapper>
                 <TopLine>ABOUT</TopLine>
                 <Heading>Hello, everyone!</Heading>
@@ -34,11 +38,23 @@ const AboutSection = () => {
                 <Subtitle>
                   I always eager to learn new skills, so I’m majoring in
                   Software Development diploma at the{' '}
-                  <a href='https://www.sait.ca/programs-and-courses/full-time-studies/diplomas/information-technology'>
+                  <a
+                    href='https://www.sait.ca/programs-and-courses/full-time-studies/diplomas/information-technology'
+                    rel='noreferrer'
+                    target='_blank'
+                  >
                     Southern Alberta Institute of Technology
-                  </a>
-                  in Calgary, AB, Canada now. This course is really interesting,
-                  and I am really enjoying it! <strong>My GPA is 3.90</strong>.
+                  </a>{' '}
+                  in{' '}
+                  <a
+                    href='https://goo.gl/maps/JETtmSSc4aV6cG7k6'
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    Calgary, AB, Canada
+                  </a>{' '}
+                  now. This course is really interesting, and I am really
+                  enjoying it! <strong>My GPA is 3.89</strong>.
                 </Subtitle>
                 <Subtitle>
                   I will do my best and be a great software developer!
@@ -48,12 +64,6 @@ const AboutSection = () => {
                   please feel free to contact me. Thank you!
                 </Subtitle>
               </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                {/* <Img src={img} alt={alt} /> */}
-                <Img src={require('../../images/me.jpg')?.default} alt={'me'} />
-              </ImgWrap>
             </Column2>
           </AboutRow>
         </AboutWrapper>
@@ -62,4 +72,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;
