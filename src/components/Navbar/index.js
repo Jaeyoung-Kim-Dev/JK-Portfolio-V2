@@ -73,7 +73,7 @@ const Navbar = ({ toggle }) => {
                 exact='true'
                 offset={document.documentElement.clientHeight * 0.1}
               >
-                Sign In
+                RESUME
               </NavBtnLink>
             </NavBtn>
           </NavbarContainer>
