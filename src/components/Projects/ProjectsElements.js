@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 
 export const ProjectsContainer = styled.div`
   min-height: 90vh;
@@ -101,4 +102,28 @@ export const ProjectLang = styled.li`
   margin: 5px;
   color: blue;
   font-size: 0.8rem;
+`;
+
+export const ProjectMenuWrapper = styled.div`
+  display: flex;
+  margin: 20px;
+`;
+
+export const ProjectFilterBtn = styled.div`
+  height: 35px;
+  border-radius: 20px;
+  padding: 13px;
+  margin: 5px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+`;
+
+export const ProjectSearchBar = styled.input`
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 13px;
+  margin: 5px;
+  font-size: 1rem;
 `;
