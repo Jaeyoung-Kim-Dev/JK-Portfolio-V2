@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 import {
   ProjectsContainer,
   ProjectsH1,
@@ -10,11 +10,13 @@ import {
   ProjectsP,
   ProjectLangWrapper,
   ProjectLang,
+  ProjectMenuWrapper,
+  ProjectFilterBtn,
+  ProjectSearchBar,
 } from './ProjectsElements';
 
 const Projects = () => {
   const [projects, setProjects] = useState(() => []);
-  const [langs, setLangs] = useState(() => []);
 
   useEffect(() => {
     fetch('./JSON/projects.json')
@@ -25,6 +27,10 @@ const Projects = () => {
   return (
     <ProjectsContainer id='projects'>
       <ProjectsH1>PROJECTS</ProjectsH1>
+      <ProjectMenuWrapper>
+        <ProjectFilterBtn>Filter</ProjectFilterBtn>
+        <ProjectSearchBar type={'text'} placeholder={'Search'} />
+      </ProjectMenuWrapper>
       <ProjectsWrapper>
         {projects.map((project, key) => (
           <ProjectsCard key={key}>
