@@ -10,11 +10,9 @@ export const ProjectsContainer = styled.div`
   background: #010606;
 
   @media screen and (max-width: 768px) {
-    height: 850px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1100px;
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
 `;
 
@@ -112,11 +110,11 @@ export const ProjectMenuWrapper = styled.div`
 export const ProjectFilterBtn = styled.div`
   height: 35px;
   border-radius: 20px;
-  padding: 13px;
   margin: 5px;
   font-size: 1rem;
   background: white;
   cursor: pointer;
+  text-align: center;
 `;
 
 export const ProjectSearchBar = styled.input`
