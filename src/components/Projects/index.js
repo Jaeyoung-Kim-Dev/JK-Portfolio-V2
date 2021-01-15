@@ -17,6 +17,7 @@ import {
 
 const Projects = () => {
   const [projects, setProjects] = useState(() => []);
+  const [queryText, setQueryText] = useState('');
 
   useEffect(() => {
     fetch('./JSON/projects.json')
@@ -24,22 +25,43 @@ const Projects = () => {
       .then((result) => setProjects(result));
   }, []);
 
+  const searchProject = async (text) => {
+    setQueryText(text);
+  };
+
+  let filteredProjects = projects;
+  filteredProjects = filteredProjects.filter((project) => {
+    return (
+      project['name'].toLowerCase().includes(queryText.toLowerCase()) ||
+      project['detail'].toLowerCase().includes(queryText.toLowerCase()) ||
+      project['langs'].map((lang) =>
+        lang.toLowerCase().includes(queryText.toLowerCase())
+      )
+    );
+  });
+
+  // debugger;
+
   return (
     <ProjectsContainer id='projects'>
       <ProjectsH1>PROJECTS</ProjectsH1>
       <ProjectMenuWrapper>
-        <ProjectFilterBtn>Filter</ProjectFilterBtn>
-        <ProjectSearchBar type={'text'} placeholder={'Search'} />
+        <ProjectFilterBtn>dd</ProjectFilterBtn>
+        <ProjectSearchBar
+          type={'text'}
+          placeholder={'Search'}
+          onChange={(e) => searchProject(e.target.value)}
+        />
       </ProjectMenuWrapper>
       <ProjectsWrapper>
-        {projects.map((project, key) => (
+        {filteredProjects.map((project, key) => (
           <ProjectsCard key={key}>
             <ProjectsH2>{project.name}</ProjectsH2>
             <ProjectsIcon
               src={require(`../../images/projects/${project.img}`)?.default}
               alt={project.name}
             />
-            <ProjectsP>{project.desc}</ProjectsP>
+            <ProjectsP>{project.detail}</ProjectsP>
             <ProjectLangWrapper>
               {project.langs.map((lang, langKey) => (
                 <ProjectLang key={langKey}>{lang}</ProjectLang>
