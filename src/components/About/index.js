@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Button } from '../ButtonElements';
 import {
   AboutContainer,
   AboutWrapper,
@@ -8,7 +7,6 @@ import {
   ImgWrap,
   Img,
   Column2,
-  // TextWrapper,
   TopLine,
   Heading,
   Subtitle,
@@ -22,12 +20,10 @@ const About = () => {
           <AboutRow>
             <Column1>
               <ImgWrap>
-                {/* <Img src={img} alt={alt} /> */}
                 <Img src={require('../../images/me.jpg')?.default} alt={'me'} />
               </ImgWrap>
             </Column1>
             <Column2>
-              {/* <TextWrapper> */}
               <TopLine>ABOUT</TopLine>
               <Heading>Hello, everyone!</Heading>
               <Subtitle>
@@ -63,7 +59,6 @@ const About = () => {
                 PS. The course ends in April 2021, and if you want to hire me,
                 please feel free to contact me. Thank you!
               </Subtitle>
-              {/* </TextWrapper> */}
             </Column2>
           </AboutRow>
         </AboutWrapper>
