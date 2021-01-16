@@ -14,7 +14,7 @@ const btnTxtLight = '#fff';
 const btnBgHoverDark = '#fff';
 const btnBgHoverLight = '#01BF71';
 
-export const AboutContainer = styled.div`
+export const BlogContainer = styled.div`
   color: #fff;
   background: ${backgroundLight};
 
@@ -23,7 +23,7 @@ export const AboutContainer = styled.div`
   } ;
 `;
 
-export const AboutWrapper = styled.div`
+export const BlogWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 90vh;
@@ -39,7 +39,7 @@ export const AboutWrapper = styled.div`
   } ;
 `;
 
-export const AboutRow = styled.div`
+export const BlogRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -119,4 +119,30 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${subtitleLight};
+`;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+
+export const Button = styled(Link)`
+  border-radius: 50px;
+  background: ${btnBgLight};
+  white-space: nowrap;
+  padding: 12px 30px;
+  color: ${btnTxtLight};
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${btnBgHoverLight};
+  }
 `;

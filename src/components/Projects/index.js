@@ -16,7 +16,8 @@ import {
 } from './ProjectsElements';
 
 const Projects = () => {
-  const [projects, setProjects] = useState(() => []);
+  const [projects, setProjects] = useState([]);
+  const [techs, setTechs] = useState([]);
   const [queryText, setQueryText] = useState('');
 
   useEffect(() => {
@@ -25,7 +26,28 @@ const Projects = () => {
       .then((result) => setProjects(result));
   }, []);
 
-  const searchProject = async (text) => {
+  useEffect(() => {
+    let techList = [];
+    projects.forEach((project) => {
+      let tempList = project['langs']; //.split(' ');
+      // techList = [...techList, tempList];
+      techList.push(tempList);
+      // techList.push(...tempList);
+      console.log(techList);
+    });
+  }, [projects]);
+
+  // useEffect(() => {
+  //   let techList = [];
+  //   projects.map((project) => {
+  //     return project['langs'].map((l) => {
+  //       return techList.push(...l);
+  //     });
+  //   });
+  //   setTechs(techList);
+  // });
+
+  const searchProject = (text) => {
     setQueryText(text);
   };
 
@@ -33,10 +55,7 @@ const Projects = () => {
   filteredProjects = filteredProjects.filter((project) => {
     return (
       project['name'].toLowerCase().includes(queryText.toLowerCase()) ||
-      project['detail'].toLowerCase().includes(queryText.toLowerCase()) ||
-      project['langs'].map((lang) =>
-        lang.toLowerCase().includes(queryText.toLowerCase())
-      )
+      project['detail'].toLowerCase().includes(queryText.toLowerCase())
     );
   });
 
