@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+// import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 
 export const ProjectsContainer = styled.div`
   min-height: 90vh;

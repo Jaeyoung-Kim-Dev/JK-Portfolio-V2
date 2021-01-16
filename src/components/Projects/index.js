@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import {
   ProjectsContainer,
   ProjectsH1,
@@ -17,7 +17,7 @@ import {
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const [techs, setTechs] = useState([]);
+  // const [techs, setTechs] = useState([]);
   const [queryText, setQueryText] = useState('');
 
   useEffect(() => {
