@@ -10,7 +10,7 @@ import {
   TopLine,
   Heading,
   Subtitle,
-} from './AboutElements';
+} from './AboutElements1';
 
 const About = () => {
   return (
