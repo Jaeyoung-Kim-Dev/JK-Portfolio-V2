@@ -5,20 +5,14 @@ import {
   ProjectsH1,
   ProjectsWrapper,
   ProjectsCard,
-  ProjectsAdditional,
-  ProjectTitle,
-  ProjectsMoreInfo,
-  ProjectCoords,
-  ProjectStats,
-  ProjectsGeneral,
+  ProjectsIcon,
+  ProjectsH2,
   ProjectsP,
   ProjectLangWrapper,
   ProjectLang,
   ProjectMenuWrapper,
   ProjectFilterBtn,
   ProjectSearchBar,
-  ProjectsMore,
-  ProjectsLink,
 } from './ProjectsElements';
 
 const Projects = () => {
@@ -66,12 +60,12 @@ const Projects = () => {
   });
 
   // debugger;
-  // ProjectsAdditional, ProjectTitle, ProjectsMoreInfo, ProjectCoords, ProjectStats, ProjectsGeneral
+
   return (
     <ProjectsContainer id='projects'>
       <ProjectsH1>PROJECTS</ProjectsH1>
       <ProjectMenuWrapper>
-        <ProjectFilterBtn>Filter</ProjectFilterBtn>
+        <ProjectFilterBtn>dd</ProjectFilterBtn>
         <ProjectSearchBar
           type={'text'}
           placeholder={'Search'}
@@ -81,43 +75,23 @@ const Projects = () => {
       <ProjectsWrapper>
         {filteredProjects.map((project, key) => (
           <ProjectsCard key={key}>
-            <ProjectsAdditional>
-              <ProjectTitle>{project.name}</ProjectTitle>
-              <ProjectsMoreInfo>
-                <h1>O</h1>
-                {/* src=
-              {require(`../../images/projects/${project.img}`)?.default} alt=
-              {project.name} /> */}
-                <ProjectCoords>
-                  <ProjectLangWrapper>
-                    {project.langs.map((lang, langKey) => (
-                      <ProjectLang key={langKey}>{lang}</ProjectLang>
-                    ))}
-                  </ProjectLangWrapper>
-                </ProjectCoords>
-                <ProjectStats>
-                  <ProjectsLink
-                    href={`${project.git}`}
-                    rel='noreferrer'
-                    target='_blank'
-                  >
-                    <FaGithub />
-                  </ProjectsLink>
-                  <ProjectsLink
-                    href={`${project.link}`}
-                    rel='noreferrer'
-                    target='_blank'
-                  >
-                    <FaExternalLinkAlt />
-                  </ProjectsLink>
-                </ProjectStats>
-              </ProjectsMoreInfo>
-            </ProjectsAdditional>
-            <ProjectsGeneral>
+            <ProjectsH2>{project.name}</ProjectsH2>
+            <ProjectsIcon
+              src={require(`../../images/projects/${project.img}`)?.default}
+              alt={project.name}
+            />
+            <ProjectsP>{project.detail}</ProjectsP>
+            <ProjectLangWrapper>
+              {project.langs.map((lang, langKey) => (
+                <ProjectLang key={langKey}>{lang}</ProjectLang>
+              ))}
+            </ProjectLangWrapper>
+            <a href={`${project.git}`} rel='noreferrer' target='_blank'>
               <FaGithub />
-              <ProjectsP>{project.detail}</ProjectsP>
-              <ProjectsMore>Mouse over the card for more info</ProjectsMore>
-            </ProjectsGeneral>
+            </a>
+            <a href={`${project.link}`} rel='noreferrer' target='_blank'>
+              <FaExternalLinkAlt />
+            </a>
           </ProjectsCard>
         ))}
       </ProjectsWrapper>

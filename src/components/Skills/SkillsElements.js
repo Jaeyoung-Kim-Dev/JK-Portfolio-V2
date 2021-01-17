@@ -1,22 +1,30 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-const backgroundLight = '#e6eaee';
+const backgroundLight = '#f9f9f9';
+const backgroundDark = '#0a0620;';
 const topLine = '#01bf71';
-// const headingDark = '#f7f8fa';
+const headingDark = '#f7f8fa';
 const headingLight = '#010606';
-// const subtitleDark = '#fff';
+const subtitleDark = '#fff';
 const subtitleLight = '#010606';
+const btnBgDark = '#01BF71';
+const btnBgLight = '#010606';
+const btnTxtDark = '#010606';
+const btnTxtLight = '#fff';
+const btnBgHoverDark = '#fff';
+const btnBgHoverLight = '#01BF71';
 
-export const AboutContainer = styled.div`
+export const SkillsContainer = styled.div`
   color: #fff;
-  background: ${backgroundLight};
+  background: ${backgroundDark};
 
   @media screen and (max-width: 768px) {
     padding: 50px 0;
   } ;
 `;
 
-export const AboutWrapper = styled.div`
+export const SkillsWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 90vh;
@@ -32,7 +40,7 @@ export const AboutWrapper = styled.div`
   } ;
 `;
 
-export const AboutRow = styled.div`
+export const SkillsRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -77,6 +85,8 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 `;
 
 // export const TextWrapper = styled.div`
@@ -99,7 +109,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${headingLight};
+  color: ${headingDark};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -111,5 +121,31 @@ export const Subtitle = styled.p`
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 24px;
-  color: ${subtitleLight};
+  color: ${subtitleDark};
+`;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+
+export const Button = styled(Link)`
+  border-radius: 50px;
+  background: ${btnBgDark};
+  white-space: nowrap;
+  padding: 12px 30px;
+  color: ${btnTxtDark};
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${btnBgHoverDark};
+  }
 `;
