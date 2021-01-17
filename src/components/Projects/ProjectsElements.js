@@ -17,10 +17,9 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectsWrapper = styled.div`
-  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
 
@@ -35,31 +34,30 @@ export const ProjectsWrapper = styled.div`
 `;
 
 export const ProjectsCard = styled.div`
-  width: 300px;
-  height: 450px;
+  width: 280px;
+  height: 420px;
   background-color: #fff;
   background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  margin: 1.5rem;
+  margin: 1rem;
 
-  /* &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  } */
+  &:hover > * {
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+  }
 
-  @media screen and (max-width: 630px) {
-    height: auto;
+  @media screen and (max-width: 480px) {
+    margin: 0;
+    padding: 0;
   }
 `;
 
 export const ProjectsIcon = styled.img`
-  height: 160px;
-  width: 160px;
-  margin-bottom: 10px;
+  height: 60px;
+  width: 60px;
 `;
 
 export const ProjectsH1 = styled.h1`
@@ -72,25 +70,22 @@ export const ProjectsH1 = styled.h1`
   }
 `;
 
-export const ProjectsH2 = styled.h2`
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-`;
-
 export const ProjectLangWrapper = styled.ul`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: center;
 `;
 
 export const ProjectLang = styled.li`
   border-radius: 10px;
-  border: 1px solid;
+  /* border: 1px solid; */
   border-color: none;
   padding: 5px;
   margin: 5px;
-  color: blue;
+  background: #000;
+  color: #fff;
   font-size: 0.8rem;
 `;
 
@@ -116,36 +111,43 @@ export const ProjectSearchBar = styled.input`
   padding: 13px;
   margin: 5px;
   font-size: 1rem;
+  background: transparent;
+
+  &:focus {
+    background: white;
+  }
 `;
 
 export const ProjectsAdditional = styled.div`
   position: absolute;
   width: 100%;
   height: 80px;
-  background: #4296ea; //linear-gradient(#de685e, #ee786e);
+  align-items: center;
+  background: #4296ea; //linear-gradient(#de685e, #ee786e); */
   transition: height 0.4s;
   overflow: hidden;
   z-index: 2;
-
-  &:hover {
-    height: 100%;
-    border-radius: 0 5px 5px 0;
-  }
 `;
 
-export const ProjectTitle = styled.h1`
+export const ProjectTitle = styled.div`
   width: 100%;
-  padding-top: 20px;
   height: 50px;
+  padding-top: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
   text-align: center;
 `;
 
 export const ProjectsMoreInfo = styled.div`
   width: 100%;
-  float: top;
   position: absolute;
-  top: 150px;
-  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 70%;
+  margin-top: 16%;
 `;
 
 export const ProjectCoords = styled.div`
@@ -158,17 +160,18 @@ export const ProjectStats = styled.div`
   font-size: 2rem;
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
   top: auto;
+
   color: #fff;
 `;
 
 export const ProjectsLink = styled.a`
   font-size: 0.9em;
-  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #fff;
 
   &:hover {
@@ -180,7 +183,7 @@ export const ProjectsLink = styled.a`
 
 export const ProjectsGeneral = styled.div`
   width: 100%;
-  height: 300px;
+  height: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -189,18 +192,19 @@ export const ProjectsGeneral = styled.div`
   z-index: 1;
   box-sizing: border-box;
   padding: 2rem;
-  padding-top: 0;
+  padding-top: 40%;
   justify-content: space-between;
+  align-items: center;
 `;
 
-export const ProjectsP = styled.p`
+export const ProjectsDetails = styled.p`
   font-size: 1rem;
-  /* text-align: center; */
+  line-height: 1.4;
+  margin-bottom: 5px;
 `;
 
 export const ProjectsMore = styled.div`
   left: 2rem;
   bottom: 2rem;
-  font-size: 0.9em;
-  text-align: center;
+  font-size: 0.8em;
 `;

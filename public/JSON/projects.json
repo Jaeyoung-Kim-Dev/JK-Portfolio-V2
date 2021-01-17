@@ -1,8 +1,11 @@
 [
   {
     "name": "Chat with Titanic",
-    "img": "chatwithtitanic.jpg",
-    "detail": "You can pick people and chat with people in my favorite movie Titanic.\nMultiple users can access this application and communicate in real time.",
+    "img": "chatwithtitanic.svg",
+    "details": [
+      "You can pick people and chat with people in my favorite movie Titanic.",
+      "Multiple users can access this application and communicate in real time."
+    ],
     "langs": [
       "Node.JS",
       "Express",
@@ -16,18 +19,43 @@
   },
   {
     "name": "JK Sports Club",
-    "img": "jksportsclub.jpg",
-    "detail": "This is about a sports club management and it's not a real website.\nThe website can do CRUD (Create, Read, Update and Delete).",
+    "img": "jksportsclub.svg",
+    "details": [
+      "This is about a sports club management and it's not a real website.",
+      "The website can do CRUD (Create, Read, Update and Delete)."
+    ],
     "langs": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
     "link": "http://jksportsclub.jaeyoungkim.codes/"
   },
   {
     "name": "Battleship Game",
-    "img": "battleship.jpg",
-    "detail": "This is based on the battleship board game.\n You can remotely play this game with people.\n(You can see the speculation on the other side in real-time.)",
+    "img": "battleship.svg",
+    "details": [
+      "This is based on the battleship board game.",
+      "You can remotely play this game with people.",
+      "(You can see the speculation on the other side in real-time.)"
+    ],
     "langs": ["Java", "JavaFX"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
     "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
+  },
+  {
+    "name": "Chat with Titanic",
+    "img": "chatwithtitanic.svg",
+    "details": [
+      "You can pick people and chat with people in my favorite movie Titanic.",
+      "Multiple users can access this application and communicate in real time."
+    ],
+    "langs": [
+      "Node.JS",
+      "Express",
+      "Socket.IO",
+      "MongoDB",
+      "jQuery",
+      "Bootstrap"
+    ],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/chatwithtitanic",
+    "link": "http://chatwithtitanic.jaeyoungkim.codes/"
   }
 ]

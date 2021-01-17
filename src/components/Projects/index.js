@@ -11,7 +11,7 @@ import {
   ProjectCoords,
   ProjectStats,
   ProjectsGeneral,
-  ProjectsP,
+  ProjectsDetails,
   ProjectLangWrapper,
   ProjectLang,
   ProjectMenuWrapper,
@@ -19,6 +19,7 @@ import {
   ProjectSearchBar,
   ProjectsMore,
   ProjectsLink,
+  ProjectsIcon,
 } from './ProjectsElements';
 
 const Projects = () => {
@@ -59,10 +60,7 @@ const Projects = () => {
 
   let filteredProjects = projects;
   filteredProjects = filteredProjects.filter((project) => {
-    return (
-      project['name'].toLowerCase().includes(queryText.toLowerCase()) ||
-      project['detail'].toLowerCase().includes(queryText.toLowerCase())
-    );
+    return project['name'].toLowerCase().includes(queryText.toLowerCase());
   });
 
   // debugger;
@@ -80,14 +78,14 @@ const Projects = () => {
       </ProjectMenuWrapper>
       <ProjectsWrapper>
         {filteredProjects.map((project, key) => (
-          <ProjectsCard key={key}>
+          <ProjectsCard key={key} top={<ProjectTitle />}>
             <ProjectsAdditional>
               <ProjectTitle>{project.name}</ProjectTitle>
               <ProjectsMoreInfo>
-                <h1>O</h1>
-                {/* src=
-              {require(`../../images/projects/${project.img}`)?.default} alt=
-              {project.name} /> */}
+                <ProjectsIcon
+                  src={require(`../../images/projects/${project.img}`)?.default}
+                  alt={project.name}
+                />
                 <ProjectCoords>
                   <ProjectLangWrapper>
                     {project.langs.map((lang, langKey) => (
@@ -114,8 +112,16 @@ const Projects = () => {
               </ProjectsMoreInfo>
             </ProjectsAdditional>
             <ProjectsGeneral>
-              <FaGithub />
-              <ProjectsP>{project.detail}</ProjectsP>
+              <ProjectsIcon
+                src={require(`../../images/projects/${project.img}`)?.default}
+                alt={project.name}
+              />
+              <div>
+                {project.details.map((detail, detailKey) => (
+                  <ProjectsDetails key={detailKey}>{detail}</ProjectsDetails>
+                ))}
+              </div>
+
               <ProjectsMore>Mouse over the card for more info</ProjectsMore>
             </ProjectsGeneral>
           </ProjectsCard>
