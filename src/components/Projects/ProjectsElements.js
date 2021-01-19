@@ -68,6 +68,7 @@ export const ProjectsH1 = styled.h1`
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 64px;
+  position: relative;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
