@@ -21,7 +21,7 @@ const About = () => {
           <AboutRow>
             <Column1>
               <ImgWrap>
-                <ImageAnimation />
+                {/* <ImageAnimation /> */}
                 {/* <Img src={require('../../images/me.jpg')?.default} alt={'me'} /> */}
               </ImgWrap>
             </Column1>

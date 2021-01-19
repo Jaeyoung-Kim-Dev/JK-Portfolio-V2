@@ -66,11 +66,11 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 48px;
+  font-size: 60px;
   text-align: center;
   letter-spacing: 0.5rem;
   word-spacing: 0.5rem;
-  line-height: 200%;
+  font-family: 'Inconsolata', monospace;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -79,6 +79,88 @@ export const HeroH1 = styled.h1`
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
+  }
+`;
+
+export const HeroAniWarpper = styled.div`
+  position: relative;
+  margin: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 2px;
+    height: 100%;
+    align-items: center;
+    animation: blinkCursor 0.8s steps(3) infinite;
+  }
+
+  @keyframes blinkCursor {
+    0%,
+    75% {
+      opacity: 1;
+    }
+    76%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+`;
+
+export const HeroAniText = styled.h1`
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1rem;
+  animation: typing 6s steps(8) infinite;
+  overflow: hidden;
+  font-family: 'Inconsolata', monospace;
+
+  @keyframes typing {
+    0%,
+    90%,
+    100% {
+      width: 0;
+    }
+    30%,
+    60% {
+      width: 28rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+
+    @keyframes typing {
+      0%,
+      90%,
+      100% {
+        width: 0;
+      }
+      30%,
+      60% {
+        width: 17rem;
+      }
+    }
   }
 `;
 

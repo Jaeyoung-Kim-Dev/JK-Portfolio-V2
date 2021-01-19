@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
 }
 
 body {
@@ -11,9 +14,10 @@ body {
   min-height: 100vh;
   background: #121213;
 }
+
 .loader {
   position: relative;
-  -webkit-box-reflect: below -28px linear-gradient (transparent, #0002);
+  -webkit-box-reflect: below -20px linear-gradient(transparent, #0002);
 }
 .loader::before {
   content: '';
@@ -42,7 +46,7 @@ body {
   letter-spacing: 5px;
   font-size: 4em;
   text-transform: uppercase;
-  animation: typing 8s steps(10) inifinite;
+  animation: typing 8s steps(10) infinite;
   overflow: hidden;
 }
 @keyframes typing {
@@ -53,6 +57,6 @@ body {
   }
   30%,
   60% {
-    width: 401.88px;
+    width: 370px;
   }
 }
