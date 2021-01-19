@@ -78,7 +78,7 @@ const Projects = () => {
       </ProjectMenuWrapper>
       <ProjectsWrapper>
         {filteredProjects.map((project, key) => (
-          <ProjectsCard key={key} top={<ProjectTitle />}>
+          <ProjectsCard key={key}>
             <ProjectsAdditional>
               <ProjectTitle>{project.name}</ProjectTitle>
               <ProjectsMoreInfo>

@@ -23,6 +23,10 @@ export const ProjectsWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
 
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -112,6 +116,7 @@ export const ProjectSearchBar = styled.input`
   margin: 5px;
   font-size: 1rem;
   background: transparent;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
 
   &:focus {
     background: white;
@@ -136,6 +141,7 @@ export const ProjectTitle = styled.div`
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
+  color: #fff;
 `;
 
 export const ProjectsMoreInfo = styled.div`

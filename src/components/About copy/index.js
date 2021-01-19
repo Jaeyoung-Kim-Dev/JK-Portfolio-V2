@@ -1,5 +1,4 @@
 import React from 'react';
-import ImageAnimation from './ImageAnimation';
 import {
   AboutContainer,
   AboutWrapper,
@@ -11,7 +10,7 @@ import {
   TopLine,
   Heading,
   Subtitle,
-} from './AboutElements';
+} from './AboutElements1';
 
 const About = () => {
   return (
@@ -21,8 +20,7 @@ const About = () => {
           <AboutRow>
             <Column1>
               <ImgWrap>
-                <ImageAnimation />
-                {/* <Img src={require('../../images/me.jpg')?.default} alt={'me'} /> */}
+                <Img src={require('../../images/me.jpg')?.default} alt={'me'} />
               </ImgWrap>
             </Column1>
             <Column2>
