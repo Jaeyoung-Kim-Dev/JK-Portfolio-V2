@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import { FaHeart } from 'react-icons/fa';
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -66,19 +67,32 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 60px;
+  font-size: 4rem;
   text-align: center;
   letter-spacing: 0.5rem;
   word-spacing: 0.5rem;
   font-family: 'Inconsolata', monospace;
 
   @media screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 3rem;
     margin: 30px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 2rem;
+  }
+`;
+
+export const HeroHeart = styled(FaHeart)`
+  color: red;
+  font-size: 3rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -141,14 +155,9 @@ export const HeroAniText = styled.h1`
     }
   }
 
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
-    margin: 30px;
-  }
-
   @media screen and (max-width: 480px) {
     font-size: 3rem;
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.6rem;
 
     @keyframes typing {
       0%,
@@ -158,7 +167,7 @@ export const HeroAniText = styled.h1`
       }
       30%,
       60% {
-        width: 17rem;
+        width: 16.5rem;
       }
     }
   }

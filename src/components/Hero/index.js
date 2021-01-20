@@ -5,6 +5,7 @@ import {
   VideoBg,
   HeroContent,
   HeroH1,
+  HeroHeart,
   HeroAniWarpper,
   HeroAniText,
   HeroP,
@@ -29,7 +30,9 @@ const Hero = () => {
         <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>I Build</HeroH1>
+        <HeroH1>
+          I <HeroHeart /> Build
+        </HeroH1>
         <HeroAniWarpper>
           <HeroAniText>WEBSITES</HeroAniText>
         </HeroAniWarpper>
