@@ -28,6 +28,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   // const [techs, setTechs] = useState([]);
   const [queryText, setQueryText] = useState('');
+  const [mobileScreen, setMobileScreen] = useState(false);
 
   useEffect(() => {
     fetch('./JSON/projects.json')
@@ -42,9 +43,17 @@ const Projects = () => {
       // techList = [...techList, tempList];
       techList.push(tempList);
       // techList.push(...tempList);
-      console.log(techList);
+      // console.log(techList);
     });
   }, [projects]);
+
+  useEffect(() => {
+    if (document.documentElement.clientWidth < 500) {
+      setMobileScreen(true);
+    } else setMobileScreen(false);
+
+    console.log(document.documentElement.clientWidth);
+  }, []);
 
   const searchProject = (text) => {
     setQueryText(text);
@@ -57,8 +66,8 @@ const Projects = () => {
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 768, itemsToShow: 3, itemsToScroll: 3 },
+    { width: 500, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 870, itemsToShow: 3, itemsToScroll: 3 },
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
   ];
 
@@ -76,7 +85,7 @@ const Projects = () => {
         />
       </ProjectMenuWrapper>
       <ProjectsWrapper>
-        <Carousel breakPoints={breakPoints}>
+        <Carousel breakPoints={breakPoints} showArrows={!mobileScreen}>
           {filteredProjects.map((project, key) => (
             <ProjectsCard key={key}>
               <ProjectsAdditional>
