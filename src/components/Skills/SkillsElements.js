@@ -27,7 +27,7 @@ export const SkillsContainer = styled.div`
 export const SkillsWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

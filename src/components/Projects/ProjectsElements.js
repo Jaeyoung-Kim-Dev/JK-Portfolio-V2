@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { FaGithub, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 
 export const ProjectsContainer = styled.div`
   min-height: 90vh;
@@ -114,19 +114,42 @@ export const ProjectFilterBtn = styled.div`
   text-align: center;
 `;
 
-export const ProjectSearchBar = styled.input`
+export const ProjectSearchWrapper = styled.div`
+  position: relative;
   width: 200px;
-  height: 35px;
-  border-radius: 20px;
-  padding: 13px;
-  margin: 5px;
-  font-size: 1rem;
-  background: transparent;
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  height: 40px;
+`;
 
-  &:focus {
-    background: white;
-  }
+export const ProjectSearchBar = styled.input`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  /* color: #fff; */
+  background: transparent;
+  outline: none;
+  /* border: 1px solid #fff; */
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0 10px 0 45px;
+
+  /* &::placeholder {
+    color: #fff;
+  } */
+`;
+
+export const ProjectSearchIcon = styled(FaSearch)`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 1.5rem;
+  /* color: #fff; */
+  border-right: 1px solid;
+  /* border-right: 1px solid #fff; */
+  padding-right: 8px;
 `;
 
 export const ProjectsAdditional = styled.div`

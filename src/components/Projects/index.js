@@ -17,7 +17,9 @@ import {
   ProjectLang,
   ProjectMenuWrapper,
   ProjectFilterBtn,
+  ProjectSearchWrapper,
   ProjectSearchBar,
+  ProjectSearchIcon,
   ProjectsMore,
   ProjectsLink,
   ProjectsIcon,
@@ -78,11 +80,14 @@ const Projects = () => {
       <ProjectsH1>PROJECTS</ProjectsH1>
       <ProjectMenuWrapper>
         <ProjectFilterBtn>Filter</ProjectFilterBtn>
-        <ProjectSearchBar
-          type={'text'}
-          placeholder={'Search'}
-          onChange={(e) => searchProject(e.target.value)}
-        />
+        <ProjectSearchWrapper>
+          <ProjectSearchBar
+            type={'text'}
+            placeholder={'Search'}
+            onChange={(e) => searchProject(e.target.value)}
+          />
+          <ProjectSearchIcon />
+        </ProjectSearchWrapper>
       </ProjectMenuWrapper>
       <ProjectsWrapper>
         <Carousel breakPoints={breakPoints} showArrows={!mobileScreen}>
