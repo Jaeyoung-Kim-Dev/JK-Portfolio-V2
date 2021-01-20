@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-const backgroundLight = '#f9f9f9';
+// const backgroundLight = '#f9f9f9';
 const backgroundDark = '#0a0620;';
 const topLine = '#01bf71';
 const headingDark = '#f7f8fa';
-const headingLight = '#010606';
+// const headingLight = '#010606';
 const subtitleDark = '#fff';
-const subtitleLight = '#010606';
+// const subtitleLight = '#010606';
 const btnBgDark = '#01BF71';
-const btnBgLight = '#010606';
+// const btnBgLight = '#010606';
 const btnTxtDark = '#010606';
-const btnTxtLight = '#fff';
+// const btnTxtLight = '#fff';
 const btnBgHoverDark = '#fff';
-const btnBgHoverLight = '#01BF71';
+// const btnBgHoverLight = '#01BF71';
 
 export const SkillsContainer = styled.div`
   color: #fff;

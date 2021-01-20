@@ -1,12 +1,12 @@
 import React from 'react';
-import ImageAnimation from './ImageAnimation';
+// import ImageAnimation from './ImageAnimation';
 import {
   AboutContainer,
   AboutWrapper,
   AboutRow,
   Column1,
   ImgWrap,
-  Img,
+  // Img,
   Column2,
   TopLine,
   Heading,

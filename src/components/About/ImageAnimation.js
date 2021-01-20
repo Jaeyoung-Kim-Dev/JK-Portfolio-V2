@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageSource from './ImageSource';
+// import ImageSource from './ImageSource';
 import { Canvas } from './AboutElements';
 
 const ImageAnimation = () => {

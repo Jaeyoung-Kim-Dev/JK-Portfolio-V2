@@ -17,16 +17,20 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectsWrapper = styled.div`
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   align-items: center;
-  grid-gap: 16px;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  /* grid-gap: 16px; */
 
-  @media screen and (max-width: 1300px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width: 1000) {
+    margin-left: 0;
+    margin-right: 0;
+    /* grid-template-columns: 1fr 1fr 1fr; */
   }
-
+  /* 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -34,7 +38,7 @@ export const ProjectsWrapper = styled.div`
   @media screen and (max-width: 480px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
-  }
+  } */
 `;
 
 export const ProjectsCard = styled.div`
@@ -53,10 +57,10 @@ export const ProjectsCard = styled.div`
     border-radius: 0 5px 5px 0;
   }
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     margin: 0;
     padding: 0;
-  }
+  } */
 `;
 
 export const ProjectsIcon = styled.img`
