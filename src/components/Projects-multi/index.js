@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Carousel from 'react-elastic-carousel';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import {
   ProjectsContainer,
@@ -22,7 +23,6 @@ import {
   ProjectsLink,
   ProjectsIcon,
 } from './ProjectsElements';
-import './style.css';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -46,6 +46,16 @@ const Projects = () => {
     });
   }, [projects]);
 
+  // useEffect(() => {
+  //   let techList = [];
+  //   projects.map((project) => {
+  //     return project['langs'].map((l) => {
+  //       return techList.push(...l);
+  //     });
+  //   });
+  //   setTechs(techList);
+  // });
+
   const searchProject = (text) => {
     setQueryText(text);
   };
@@ -55,12 +65,32 @@ const Projects = () => {
     return project['name'].toLowerCase().includes(queryText.toLowerCase());
   });
 
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 768, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
-  ];
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+      slidesToSlide: 4, // optional, default to 1.
+      partialVisibilityGutter: 30,
+    },
+    tablet: {
+      breakpoint: { max: 1600, min: 1200 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+      partialVisibilityGutter: 30,
+    },
+    tabletSSmall: {
+      breakpoint: { max: 1200, min: 800 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+      partialVisibilityGutter: 30,
+    },
+    mobile: {
+      breakpoint: { max: 800, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+      partialVisibilityGutter: 30,
+    },
+  };
 
   // debugger;
   // ProjectsAdditional, ProjectTitle, ProjectsMoreInfo, ProjectCoords, ProjectStats, ProjectsGeneral
@@ -76,7 +106,25 @@ const Projects = () => {
         />
       </ProjectMenuWrapper>
       <ProjectsWrapper>
-        <Carousel breakPoints={breakPoints}>
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          autoPlay={false}
+          autoPlaySpeed={1000}
+          keyBoardControl={true}
+          customTransition='all .5'
+          transitionDuration={500}
+          containerClass='carousel-container'
+          removeArrowOnDeviceType={['tablet', 'mobile']}
+          deviceType='desktop'
+          dotListClass='custom-dot-list-style'
+          itemClass='carousel-item-padding-40-px'
+          partialVisible={true}
+        >
           {filteredProjects.map((project, key) => (
             <ProjectsCard key={key}>
               <ProjectsAdditional>
