@@ -6,7 +6,7 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   background: #e6eaee;
 
   @media screen and (max-width: 768px) {
@@ -70,7 +70,6 @@ export const ProjectsIcon = styled.img`
 
 export const ProjectsH1 = styled.h1`
   font-size: 2.5rem;
-  text-align: center;
   color: #000;
   margin-bottom: 64px;
   position: relative;
@@ -90,6 +89,7 @@ export const ProjectLangWrapper = styled.ul`
 
 export const ProjectLang = styled.li`
   border-radius: 10px;
+  /* border: 1px solid; */
   border-color: none;
   padding: 5px;
   margin: 5px;
@@ -101,7 +101,6 @@ export const ProjectLang = styled.li`
 export const ProjectMenuWrapper = styled.div`
   display: flex;
   margin: 20px;
-  justify-content: center;
 `;
 
 export const ProjectFilterBtn = styled.div`
@@ -219,16 +218,4 @@ export const ProjectsMore = styled.div`
   left: 2rem;
   bottom: 2rem;
   font-size: 0.8em;
-`;
-
-export const Aa = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 100%;
-  background-color: #683bb7;
-  color: #fff;
-  margin: 15px;
-  font-size: 4em;
 `;
