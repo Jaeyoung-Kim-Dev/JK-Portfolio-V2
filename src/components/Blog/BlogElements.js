@@ -27,7 +27,7 @@ export const BlogContainer = styled.div`
 export const BlogWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
