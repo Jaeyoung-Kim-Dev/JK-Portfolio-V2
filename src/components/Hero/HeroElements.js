@@ -135,10 +135,10 @@ export const HeroAniWarpper = styled.div`
 
 export const HeroAniText = styled.h1`
   color: #fff;
-  font-size: 5rem;
+  font-size: 70px;
   text-align: center;
   position: relative;
-  letter-spacing: 1rem;
+  letter-spacing: 20px;
   animation: typing 6s steps(8) infinite;
   overflow: hidden;
   font-family: 'Inconsolata', monospace;
@@ -151,13 +151,13 @@ export const HeroAniText = styled.h1`
     }
     30%,
     60% {
-      width: 28rem;
+      width: 440px;
     }
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 3rem;
-    letter-spacing: 0.6rem;
+    font-size: 45px;
+    letter-spacing: 10px;
 
     @keyframes typing {
       0%,
@@ -167,7 +167,7 @@ export const HeroAniText = styled.h1`
       }
       30%,
       60% {
-        width: 16.5rem;
+        width: 260px;
       }
     }
   }
