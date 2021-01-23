@@ -19,7 +19,7 @@ export const AboutContainer = styled.div`
 export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
-  min-height: 90vh;
+  height: 90vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -77,6 +77,8 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 `;
 
 // export const TextWrapper = styled.div`
@@ -112,11 +114,4 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${subtitleLight};
-`;
-
-export const Canvas = styled.div`
-  width: 500px;
-  height: 623px;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
 `;
