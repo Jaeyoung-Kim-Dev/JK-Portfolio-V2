@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import {
   AboutContainer,
   AboutWrapper,
@@ -13,31 +13,10 @@ import {
 } from './AboutElements';
 
 const About = () => {
-  const card = useRef();
+  const [photoNumber, setPhotoNumber] = useState(4);
 
-  function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX + rect.width / 2,
-      top: rect.top + window.scrollY + rect.height / 2,
-    };
-  }
-
-  const mouseMove = (e) => {
-    let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-    let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-    card.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    console.log(getOffset(card.current).left);
-    // alert('a');
-  };
-
-  const mouseEnter = () => {
-    card.current.style.transition = 'none';
-  };
-
-  const mouseLeave = () => {
-    card.current.style.transition = 'all 0.5s ease';
-    card.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  const myNextPhoto = () => {
+    setPhotoNumber(photoNumber === 0 ? 4 : photoNumber - 1);
   };
 
   return (
@@ -46,15 +25,13 @@ const About = () => {
         <AboutWrapper>
           <AboutRow>
             <Column1>
-              <ImgWrap
-                onMouseMove={mouseMove}
-                onMouseCenter={mouseEnter}
-                onMouseLeave={mouseLeave}
-              >
+              <ImgWrap>
                 <Img
-                  src={require('../../images/me.jpg')?.default}
+                  src={
+                    require(`../../images/about/me${photoNumber}.jpeg`)?.default
+                  }
                   alt={'me'}
-                  ref={card}
+                  onClick={myNextPhoto}
                 />
               </ImgWrap>
             </Column1>
