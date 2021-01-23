@@ -167,7 +167,7 @@ export const HeroAniText = styled.h1`
       }
       30%,
       60% {
-        width: 260px;
+        width: 265px;
       }
     }
   }
