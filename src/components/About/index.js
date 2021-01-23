@@ -28,7 +28,7 @@ const About = () => {
               <ImgWrap>
                 <Img
                   src={
-                    require(`../../images/about/me${photoNumber}.jpeg`)?.default
+                    require(`../../images/about/me${photoNumber}.jpg`)?.default
                   }
                   alt={'me'}
                   onClick={myNextPhoto}
