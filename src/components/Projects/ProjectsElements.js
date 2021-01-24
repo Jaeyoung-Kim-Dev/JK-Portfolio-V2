@@ -23,6 +23,8 @@ export const ProjectsWrapper = styled.div`
   align-items: center;
   margin-left: 7vw;
   margin-right: 7vw;
+  touch-action: pan-y;
+  --ms-touch-action: pan-y;
   /* grid-gap: 16px; */
 
   @media screen and (max-width: 1000) {
