@@ -81,6 +81,31 @@ export const Img = styled.img`
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 `;
 
+export const AboutMsg = styled.div`
+  position: absolute;
+  max-width: 170px;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  transform: translate(-10%, -50%);
+  color: #fff;
+  background: #58a800;
+  padding: 15px;
+
+  &:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid #58a800;
+    border-left: 12px solid transparent;
+    border-top: 12px solid #58a800;
+    border-bottom: 20px solid transparent;
+    left: 70px;
+    bottom: -24px;
+  }
+`;
+
 // export const TextWrapper = styled.div`
 //   /* max-width: 540px; */
 //   padding-top: 0;

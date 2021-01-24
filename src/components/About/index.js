@@ -5,6 +5,7 @@ import {
   AboutRow,
   Column1,
   ImgWrap,
+  AboutMsg,
   Img,
   Column2,
   TopLine,
@@ -14,11 +15,25 @@ import {
 
 const About = () => {
   const [photoNumber, setPhotoNumber] = useState(4);
+  // const [bubbles, setBubbles] = useState([]);
+  // const [currentBubble, setCurrentBubble] = useState([]);
 
   const myNextPhoto = () => {
     setPhotoNumber(photoNumber === 0 ? 4 : photoNumber - 1);
+    // setCurrentBubble(bubbles[1]);
   };
 
+  // useEffect(() => {
+  //   fetch('./JSON/aboutBubbles.json')
+  //     .then((response) => response.json())
+  //     .then((result) => setBubbles(result));
+  //   // setCurrentBubble(bubbles[0].comment);
+  // }, []);
+
+  // console.log(bubbles[0]);
+  // console.log(currentBubble);
+
+  // debugger;
   return (
     <>
       <AboutContainer id={'about'}>
@@ -26,6 +41,7 @@ const About = () => {
           <AboutRow>
             <Column1>
               <ImgWrap>
+                <AboutMsg>Keep touching Lego blocks</AboutMsg>
                 <Img
                   src={
                     require(`../../images/about/me${photoNumber}.jpg`)?.default
@@ -62,7 +78,7 @@ const About = () => {
                   Calgary, AB, Canada
                 </a>{' '}
                 now. This course is really interesting, and I am really enjoying
-                it! <strong>My GPA is 3.89</strong>.
+                it! My current <strong>GPA</strong> is <strong>3.89</strong>.
               </Subtitle>
               <Subtitle>
                 I will do my best and be a great software developer!
