@@ -142,6 +142,8 @@ export const HeroAniText = styled.h1`
   animation: typing 6s steps(8) infinite;
   overflow: hidden;
   font-family: 'Inconsolata', monospace;
+  -webkit-text-size-adjust: 100%;
+  -webkit-appearance: none;
 
   @keyframes typing {
     0%,
