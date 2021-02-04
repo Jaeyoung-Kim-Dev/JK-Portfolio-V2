@@ -53,6 +53,7 @@ export const ProjectsCard = styled.div`
   overflow: hidden;
   position: relative;
   margin: 1rem;
+  outline: none;
 
   &:hover > * {
     height: 100%;
