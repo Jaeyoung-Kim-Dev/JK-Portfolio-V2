@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Fade from 'react-reveal/Fade';
 import projects from './projects.json';
 import {
   ProjectsContainer,
@@ -49,7 +50,6 @@ const Projects = () => {
             // return project['name'].toLowerCase().includes(text.toLowerCase());
             return (
               project['name'].toLowerCase().includes(text.toLowerCase()) ||
-              // project['langs'].indexOf(text) !== -1
               project['langs'].includes(text)
             );
           })
@@ -90,13 +90,15 @@ const Projects = () => {
         </ProjectSearchWrapper>
       </ProjectMenuWrapper>
       {filterSwitch ? (
-        <LangListWrapper>
-          {langs.map((lang, key) => (
-            <LangList key={key} onClick={() => filterLang(lang)}>
-              {lang}
-            </LangList>
-          ))}
-        </LangListWrapper>
+        <Fade top cascade>
+          <LangListWrapper>
+            {langs.map((lang, key) => (
+              <LangList key={key} onClick={() => filterLang(lang)}>
+                {lang}
+              </LangList>
+            ))}
+          </LangListWrapper>
+        </Fade>
       ) : (
         ''
       )}
@@ -106,61 +108,69 @@ const Projects = () => {
           showArrows={window.innerWidth > 480}
         >
           {filteredProjects.map((project, key) => (
-            <ProjectsCard key={key}>
-              <ProjectsAdditional>
-                <ProjectTitle>{project.name}</ProjectTitle>
-                <ProjectsMoreInfo>
+            <Fade right>
+              <ProjectsCard key={key}>
+                <ProjectsAdditional>
+                  <ProjectTitle>{project.name}</ProjectTitle>
+                  <ProjectsMoreInfo>
+                    <ProjectsIcon
+                      src={
+                        require(`../../images/projects/${project.img}`)?.default
+                      }
+                      alt={project.name}
+                    />
+                    <ProjectCoords>
+                      <ProjectLangWrapper>
+                        {project.langs.map((lang, langKey) => (
+                          <ProjectLang key={langKey}>{lang}</ProjectLang>
+                        ))}
+                      </ProjectLangWrapper>
+                    </ProjectCoords>
+                    <ProjectStats>
+                      <ProjectsLink
+                        href={`${project.git}`}
+                        rel='noreferrer'
+                        target='_blank'
+                      >
+                        <FaGithub />
+                      </ProjectsLink>
+                      <ProjectsLink
+                        href={`${project.link}`}
+                        rel='noreferrer'
+                        target='_blank'
+                      >
+                        <FaExternalLinkAlt />
+                      </ProjectsLink>
+                    </ProjectStats>
+                  </ProjectsMoreInfo>
+                </ProjectsAdditional>
+                <ProjectsGeneral>
                   <ProjectsIcon
                     src={
                       require(`../../images/projects/${project.img}`)?.default
                     }
                     alt={project.name}
                   />
-                  <ProjectCoords>
-                    <ProjectLangWrapper>
-                      {project.langs.map((lang, langKey) => (
-                        <ProjectLang key={langKey}>{lang}</ProjectLang>
-                      ))}
-                    </ProjectLangWrapper>
-                  </ProjectCoords>
-                  <ProjectStats>
-                    <ProjectsLink
-                      href={`${project.git}`}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      <FaGithub />
-                    </ProjectsLink>
-                    <ProjectsLink
-                      href={`${project.link}`}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      <FaExternalLinkAlt />
-                    </ProjectsLink>
-                  </ProjectStats>
-                </ProjectsMoreInfo>
-              </ProjectsAdditional>
-              <ProjectsGeneral>
-                <ProjectsIcon
-                  src={require(`../../images/projects/${project.img}`)?.default}
-                  alt={project.name}
-                />
-                <div>
-                  {project.details.map((detail, detailKey) => (
-                    <ProjectsDetails key={detailKey}>{detail}</ProjectsDetails>
-                  ))}
-                </div>
+                  <div>
+                    {project.details.map((detail, detailKey) => (
+                      <ProjectsDetails key={detailKey}>
+                        {detail}
+                      </ProjectsDetails>
+                    ))}
+                  </div>
 
-                {window.innerWidth > 480 ? (
-                  <ProjectsMore>Mouse over the CARD for more info</ProjectsMore>
-                ) : (
-                  <ProjectsMore>
-                    Touch the card TITLE for more info
-                  </ProjectsMore>
-                )}
-              </ProjectsGeneral>
-            </ProjectsCard>
+                  {window.innerWidth > 480 ? (
+                    <ProjectsMore>
+                      Mouse over the CARD for more info
+                    </ProjectsMore>
+                  ) : (
+                    <ProjectsMore>
+                      Touch the card TITLE for more info
+                    </ProjectsMore>
+                  )}
+                </ProjectsGeneral>
+              </ProjectsCard>
+            </Fade>
           ))}
         </Carousel>
       </ProjectsWrapper>
