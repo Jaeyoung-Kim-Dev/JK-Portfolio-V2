@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Carousel from 'react-elastic-carousel';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaFilter } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 import projects from './projects.json';
 import {
   ProjectsContainer,
   ProjectsH1,
+  ProjectsP,
   ProjectsWrapper,
   ProjectsCard,
   ProjectsAdditional,
@@ -18,7 +19,7 @@ import {
   ProjectLangWrapper,
   ProjectLang,
   ProjectMenuWrapper,
-  ProjectFilterBtn,
+  ProjectFilterButtonWrapper,
   ProjectSearchWrapper,
   ProjectSearchBar,
   ProjectSearchIcon,
@@ -40,6 +41,7 @@ projects.forEach((project) => {
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [filterSwitch, setFilterSwitch] = useState(false);
+  const [filterLang, setFilterLang] = useState();
 
   const searchProject = (text) => {
     text === ''
@@ -56,7 +58,13 @@ const Projects = () => {
         );
   };
 
-  const filterLang = (lang) => {
+  const filterSwitchHandler = (filterSwitch) => {
+    setFilterSwitch(!filterSwitch);
+    if (filterSwitch) setFilteredProjects(projects);
+  };
+
+  const filterLangHandler = (lang) => {
+    setFilterLang(lang);
     setFilteredProjects(
       projects.filter((project) => {
         return project['langs'].includes(lang);
@@ -71,15 +79,19 @@ const Projects = () => {
     { width: 500, itemsToShow: 2, itemsToScroll: 2 },
     { width: 870, itemsToShow: 3, itemsToScroll: 3 },
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
+    { width: 1700, itemsToShow: 5, itemsToScroll: 5 },
   ];
 
   return (
     <ProjectsContainer id='projects'>
       <ProjectsH1>PROJECTS</ProjectsH1>
       <ProjectMenuWrapper>
-        <ProjectFilterBtn onClick={() => setFilterSwitch(!filterSwitch)}>
-          Filter
-        </ProjectFilterBtn>
+        <ProjectFilterButtonWrapper
+          filterSwitch={filterSwitch}
+          onClick={() => filterSwitchHandler(filterSwitch)}
+        >
+          <FaFilter />
+        </ProjectFilterButtonWrapper>
         <ProjectSearchWrapper>
           <ProjectSearchBar
             type={'text'}
@@ -93,7 +105,11 @@ const Projects = () => {
         <Fade top cascade>
           <LangListWrapper>
             {langs.map((lang, key) => (
-              <LangList key={key} onClick={() => filterLang(lang)}>
+              <LangList
+                key={key}
+                filterLang={filterLang === lang}
+                onClick={() => filterLangHandler(lang)}
+              >
                 {lang}
               </LangList>
             ))}
@@ -102,6 +118,10 @@ const Projects = () => {
       ) : (
         ''
       )}
+      <ProjectsP>
+        <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
+        Project(s) found!
+      </ProjectsP>
       <ProjectsWrapper>
         <Carousel
           breakPoints={breakPoints}

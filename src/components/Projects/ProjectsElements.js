@@ -5,10 +5,11 @@ export const ProjectsContainer = styled.div`
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   /* align-items: center; */
   /* background: #e6eaee; */
   background: #0a0620;
+  padding-top: 5vh;
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -88,7 +89,21 @@ export const ProjectsH1 = styled.h1`
   text-align: center;
   /* color: #000; */
   color: #fff;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
+  position: relative;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+`;
+
+export const ProjectsP = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  /* color: #000; */
+  color: #fff;
+  margin: 10px 0 10px;
   position: relative;
 
   @media screen and (max-width: 480px) {
@@ -122,16 +137,26 @@ export const ProjectMenuWrapper = styled.div`
   align-items: center;
 `;
 
-export const ProjectFilterBtn = styled.div`
-  border-radius: 15px;
+export const ProjectFilterButtonWrapper = styled.div`
+  border-radius: 10px;
+  border: 1px solid;
+  border-radius: 4px;
   /* background: #000; */
-  background: #fff;
-  /* color: #fff; */
-  margin: 5px;
-  padding: 10px;
-  font-size: 1rem;
+  /* background: #fff; */
+  color: ${({ filterSwitch }) => (filterSwitch ? '#8ebeef' : '#fff')};
+  transform: ${({ filterSwitch }) => (filterSwitch ? 'scale(1.2)' : '')};
+  font-size: '1.2rem';
+  margin-right: 15px;
+  padding: 10px 10px 5px 10px;
   cursor: pointer;
   text-align: center;
+
+  &:hover {
+    transform: scale(1.2);
+    color: #8ebeef;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
 `;
 
 export const ProjectSearchWrapper = styled.div`
@@ -280,7 +305,12 @@ export const LangListWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* transition: all 0.2s ease-in-out; */
+  margin-bottom: 20px;
+  /* max-width: 80vw; */
+
+  @media screen and (max-width: 480px) {
+    max-width: 100vw;
+  }
 `;
 
 export const LangList = styled.div`
@@ -288,10 +318,12 @@ export const LangList = styled.div`
   background: #fff;
   /* color: #fff; */
   padding: 5px;
-  margin: 5px;
+  margin: 7px;
   border-radius: 10px;
   text-align: center;
   /* cursor: pointer; */
+  background: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
+  transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
 
   &:hover {
     transform: scale(1.2);
