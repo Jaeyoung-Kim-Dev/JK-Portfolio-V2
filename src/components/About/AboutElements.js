@@ -79,6 +79,7 @@ export const Img = styled.img`
   width: 100%;
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 `;
 
 export const AboutMsg = styled.div`

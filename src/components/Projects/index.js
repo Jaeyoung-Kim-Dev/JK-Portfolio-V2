@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import projects from './projects.json';
 import {
   ProjectsContainer,
   ProjectsH1,
@@ -23,48 +24,47 @@ import {
   ProjectsMore,
   ProjectsLink,
   ProjectsIcon,
+  LangListWrapper,
+  LangList,
 } from './ProjectsElements';
 import './style.css';
 
+let langs = ['React', 'Java', 'Node.JS']; // priority languages
+projects.forEach((project) => {
+  Array.prototype.push.apply(langs, project['langs']); //merge objects in array
+  langs = [...new Set(langs)]; //remove duplicate elements
+});
+// console.log({ langs });
+
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  // const [techs, setTechs] = useState([]);
-  const [queryText, setQueryText] = useState('');
-  const [mobileScreen, setMobileScreen] = useState(false);
-
-  useEffect(() => {
-    fetch('./JSON/projects.json')
-      .then((response) => response.json())
-      .then((result) => setProjects(result));
-  }, []);
-
-  useEffect(() => {
-    let techList = [];
-    projects.forEach((project) => {
-      let tempList = project['langs']; //.split(' ');
-      // techList = [...techList, tempList];
-      techList.push(tempList);
-      // techList.push(...tempList);
-      // console.log(techList);
-    });
-  }, [projects]);
-
-  useEffect(() => {
-    if (document.documentElement.clientWidth < 500) {
-      setMobileScreen(true);
-    } else setMobileScreen(false);
-
-    console.log(document.documentElement.clientWidth);
-  }, []);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [filterSwitch, setFilterSwitch] = useState(false);
 
   const searchProject = (text) => {
-    setQueryText(text);
+    text === ''
+      ? setFilteredProjects(projects)
+      : setFilteredProjects(
+          projects.filter((project) => {
+            console.log(project['langs']);
+            // return project['name'].toLowerCase().includes(text.toLowerCase());
+            return (
+              project['name'].toLowerCase().includes(text.toLowerCase()) ||
+              // project['langs'].indexOf(text) !== -1
+              project['langs'].includes(text)
+            );
+          })
+        );
   };
 
-  let filteredProjects = projects;
-  filteredProjects = filteredProjects.filter((project) => {
-    return project['name'].toLowerCase().includes(queryText.toLowerCase());
-  });
+  const filterLang = (lang) => {
+    setFilteredProjects(
+      projects.filter((project) => {
+        return project['langs'].includes(lang);
+      })
+    );
+  };
+
+  // console.log({ filteredProjects });
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -73,13 +73,13 @@ const Projects = () => {
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
   ];
 
-  // debugger;
-  // ProjectsAdditional, ProjectTitle, ProjectsMoreInfo, ProjectCoords, ProjectStats, ProjectsGeneral
   return (
     <ProjectsContainer id='projects'>
       <ProjectsH1>PROJECTS</ProjectsH1>
       <ProjectMenuWrapper>
-        <ProjectFilterBtn>Filter</ProjectFilterBtn>
+        <ProjectFilterBtn onClick={() => setFilterSwitch(!filterSwitch)}>
+          Filter
+        </ProjectFilterBtn>
         <ProjectSearchWrapper>
           <ProjectSearchBar
             type={'text'}
@@ -89,8 +89,22 @@ const Projects = () => {
           <ProjectSearchIcon />
         </ProjectSearchWrapper>
       </ProjectMenuWrapper>
+      {filterSwitch ? (
+        <LangListWrapper>
+          {langs.map((lang, key) => (
+            <LangList key={key} onClick={() => filterLang(lang)}>
+              {lang}
+            </LangList>
+          ))}
+        </LangListWrapper>
+      ) : (
+        ''
+      )}
       <ProjectsWrapper>
-        <Carousel breakPoints={breakPoints} showArrows={!mobileScreen}>
+        <Carousel
+          breakPoints={breakPoints}
+          showArrows={window.innerWidth > 480}
+        >
           {filteredProjects.map((project, key) => (
             <ProjectsCard key={key}>
               <ProjectsAdditional>
@@ -138,7 +152,13 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <ProjectsMore>Mouse over the card for more info</ProjectsMore>
+                {window.innerWidth > 480 ? (
+                  <ProjectsMore>Mouse over the CARD for more info</ProjectsMore>
+                ) : (
+                  <ProjectsMore>
+                    Touch the card TITLE for more info
+                  </ProjectsMore>
+                )}
               </ProjectsGeneral>
             </ProjectsCard>
           ))}
