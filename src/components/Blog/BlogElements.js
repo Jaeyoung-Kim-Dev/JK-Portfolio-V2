@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-// const backgroundLight = '#f9f9f9';
-const backgroundDark = '#0a0620;';
+const backgroundLight = '#e6eaee';
+// const backgroundDark = '#0a0620';
 const topLine = '#01bf71';
-const headingDark = '#f7f8fa';
-// const headingLight = '#010606';
-const subtitleDark = '#fff';
-// const subtitleLight = '#010606';
-const btnBgDark = '#01BF71';
-// const btnBgLight = '#010606';
-const btnTxtDark = '#010606';
-// const btnTxtLight = '#fff';
-const btnBgHoverDark = '#fff';
-// const btnBgHoverLight = '#01BF71';
+// const headingDark = '#f7f8fa';
+const headingLight = '#010606';
+// const subtitleDark = '#fff';
+const subtitleLight = '#010606';
+// const btnBgDark = '#01BF71';
+const btnBgLight = '#010606';
+// const btnTxtDark = '#010606';
+const btnTxtLight = '#fff';
+// const btnBgHoverDark = '#fff';
+const btnBgHoverLight = '#01BF71';
 
 export const BlogContainer = styled.div`
   color: #fff;
-  background: ${backgroundDark};
+  background: ${backgroundLight};
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     padding: 50px 0;
-  } ;
+  } ; */
 `;
 
 export const BlogWrapper = styled.div`
@@ -37,6 +37,7 @@ export const BlogWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     height: auto;
+    padding: 0;
   } ;
 `;
 
@@ -57,6 +58,7 @@ export const Column1 = styled.div`
   grid-area: col1;
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 0;
     padding: 40px;
   }
 
@@ -109,7 +111,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${headingDark};
+  color: ${headingLight};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -121,7 +123,7 @@ export const Subtitle = styled.p`
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 24px;
-  color: ${subtitleDark};
+  color: ${subtitleLight};
 `;
 
 export const BtnWrap = styled.div`
@@ -131,10 +133,10 @@ export const BtnWrap = styled.div`
 
 export const Button = styled(Link)`
   border-radius: 50px;
-  background: ${btnBgDark};
+  background: ${btnBgLight};
   white-space: nowrap;
   padding: 12px 30px;
-  color: ${btnTxtDark};
+  color: ${btnTxtLight};
   font-size: 16px;
   outline: none;
   border: none;
@@ -146,6 +148,6 @@ export const Button = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${btnBgHoverDark};
+    background: ${btnBgHoverLight};
   }
 `;

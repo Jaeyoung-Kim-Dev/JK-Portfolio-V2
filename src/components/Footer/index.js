@@ -3,11 +3,6 @@ import { animateScroll as scroll } from 'react-scroll';
 import {
   FooterContainer,
   FooterWrap,
-  FooterLinkContainer,
-  FooterLinksWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLink,
   SocialMedia,
   SocialMediaWrap,
   SocialLogo,
@@ -31,44 +26,6 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinkContainer>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>About Me</FooterLinkTitle>
-              <FooterLink to='/signin'>How it works</FooterLink>
-              <FooterLink to='/signin'>Testimonials</FooterLink>
-              <FooterLink to='/signin'>Careers</FooterLink>
-              <FooterLink to='/signin'>Investors</FooterLink>
-              <FooterLink to='/signin'>Terms of Services</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>About Me</FooterLinkTitle>
-              <FooterLink to='/signin'>How it works</FooterLink>
-              <FooterLink to='/signin'>Testimonials</FooterLink>
-              <FooterLink to='/signin'>Careers</FooterLink>
-              <FooterLink to='/signin'>Investors</FooterLink>
-              <FooterLink to='/signin'>Terms of Services</FooterLink>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>About Me</FooterLinkTitle>
-              <FooterLink to='/signin'>How it works</FooterLink>
-              <FooterLink to='/signin'>Testimonials</FooterLink>
-              <FooterLink to='/signin'>Careers</FooterLink>
-              <FooterLink to='/signin'>Investors</FooterLink>
-              <FooterLink to='/signin'>Terms of Services</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>About Me</FooterLinkTitle>
-              <FooterLink to='/signin'>How it works</FooterLink>
-              <FooterLink to='/signin'>Testimonials</FooterLink>
-              <FooterLink to='/signin'>Careers</FooterLink>
-              <FooterLink to='/signin'>Investors</FooterLink>
-              <FooterLink to='/signin'>Terms of Services</FooterLink>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-        </FooterLinkContainer>
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>

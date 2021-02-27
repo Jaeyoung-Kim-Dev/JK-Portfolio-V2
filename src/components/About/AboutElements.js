@@ -90,7 +90,7 @@ export const AboutMsg = styled.div`
   border-radius: 30px;
   transform: translate(-10%, -50%);
   color: #fff;
-  background: #58a800;
+  background: ${({ bgCorlor }) => bgCorlor};
   padding: 15px;
 
   &:before {
@@ -98,9 +98,9 @@ export const AboutMsg = styled.div`
     width: 0px;
     height: 0px;
     position: absolute;
-    border-right: 24px solid #58a800;
+    border-right: 24px solid ${({ bgCorlor }) => bgCorlor};
     border-left: 12px solid transparent;
-    border-top: 12px solid #58a800;
+    border-top: 12px solid ${({ bgCorlor }) => bgCorlor};
     border-bottom: 20px solid transparent;
     left: 70px;
     bottom: -24px;

@@ -295,6 +295,7 @@ export const LangList = styled.div`
 
   &:hover {
     transform: scale(1.2);
+    background: #8ebeef;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
