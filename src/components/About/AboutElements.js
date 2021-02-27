@@ -141,3 +141,8 @@ export const Subtitle = styled.p`
   line-height: 24px;
   color: ${subtitleLight};
 `;
+
+export const Link = styled.a`
+  color: #0006ff;
+  text-decoration: none;
+`;

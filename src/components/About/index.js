@@ -13,6 +13,7 @@ import {
   TopLine,
   Heading,
   Subtitle,
+  Link,
 } from './AboutElements';
 
 const bubbles = [
@@ -80,21 +81,21 @@ const About = () => {
                 <Subtitle>
                   I always eager to learn new skills, so I’m majoring in
                   Software Development diploma at the{' '}
-                  <a
+                  <Link
                     href='https://www.sait.ca/programs-and-courses/full-time-studies/diplomas/information-technology'
                     rel='noreferrer'
                     target='_blank'
                   >
                     Southern Alberta Institute of Technology
-                  </a>{' '}
+                  </Link>{' '}
                   in{' '}
-                  <a
+                  <Link
                     href='https://goo.gl/maps/JETtmSSc4aV6cG7k6'
                     rel='noreferrer'
                     target='_blank'
                   >
                     Calgary, AB, Canada
-                  </a>{' '}
+                  </Link>{' '}
                   now. This course is really interesting, and I am really
                   enjoying it! My current <strong>GPA</strong> is{' '}
                   <strong>3.89</strong>.

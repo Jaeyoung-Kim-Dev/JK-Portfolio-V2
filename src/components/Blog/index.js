@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import {
   BlogContainer,
   BlogWrapper,
@@ -30,15 +31,17 @@ const Blog = () => {
               </ImgWrap>
             </Column1>
             <Column2>
-              <TopLine>Blog</TopLine>
-              <Heading>Learning something new!</Heading>
-              <Subtitle>
-                This blog is my knowledge of software development that I want to
-                share with others or something I want to remember.
-              </Subtitle>
-              <BtnWrap>
-                <Button>View postings</Button>
-              </BtnWrap>
+              <Fade right cascade>
+                <TopLine>Blog</TopLine>
+                <Heading>Learning something new!</Heading>
+                <Subtitle>
+                  This blog is my knowledge of software development that I want
+                  to share with others or something I want to remember.
+                </Subtitle>
+                <BtnWrap>
+                  <Button>View postings</Button>
+                </BtnWrap>
+              </Fade>
             </Column2>
           </BlogRow>
         </BlogWrapper>
