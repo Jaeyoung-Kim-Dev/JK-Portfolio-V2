@@ -42,7 +42,7 @@
     ],
     "types": ["Game"],
     "languages": ["Java"],
-    "technologies": ["JavaFX", "Multi-Thred", "Socket"],
+    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
     "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
   },
@@ -89,7 +89,7 @@
     ],
     "types": ["Game"],
     "languages": ["Java"],
-    "technologies": ["JavaFX", "Multi-Thred", "Socket"],
+    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
     "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
   }

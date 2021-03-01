@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 
 export const ProjectsContainer = styled.div`
-  min-height: 90vh;
+  height: 90vh;
+  max-height: 950px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -54,7 +55,8 @@ export const ProjectsCard = styled.div`
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  margin: 1rem;
+  /* margin: 1rem; */
+  margin: 5vh;
   outline: none;
 
   @media not all and (pointer: coarse) {
@@ -89,7 +91,7 @@ export const ProjectsH1 = styled.h1`
   text-align: center;
   /* color: #000; */
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   position: relative;
 
   @media screen and (max-width: 480px) {
@@ -143,8 +145,8 @@ export const ProjectFilterButtonWrapper = styled.div`
   border-radius: 4px;
   /* background: #000; */
   /* background: #fff; */
-  color: ${({ filterSwitch }) => (filterSwitch ? '#8ebeef' : '#fff')};
-  transform: ${({ filterSwitch }) => (filterSwitch ? 'scale(1.2)' : '')};
+  color: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
+  transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
   font-size: '1.2rem';
   margin-right: 15px;
   padding: 10px 10px 5px 10px;
