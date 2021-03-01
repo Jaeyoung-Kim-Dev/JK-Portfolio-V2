@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 import { FaGithub, FaExternalLinkAlt, FaFilter } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
+import Modal from 'react-modal';
 import projects from './projects.json';
 import {
   ProjectsContainer,
@@ -31,12 +32,34 @@ import {
 } from './ProjectsElements';
 import './style.css';
 
-let langs = ['React', 'Java', 'Node.JS']; // priority languages
+let types = [];
+let languages = ['JavaScript', 'Java'];
+let technologies = ['React', 'Node.JS']; // priority languages
 projects.forEach((project) => {
-  Array.prototype.push.apply(langs, project['langs']); //merge objects in array
-  langs = [...new Set(langs)]; //remove duplicate elements
+  Array.prototype.push.apply(types, project['types']); //merge objects in array
+  types = [...new Set(types)]; //remove duplicate elements
+  Array.prototype.push.apply(languages, project['languages']); //merge objects in array
+  languages = [...new Set(languages)]; //remove duplicate elements
+  Array.prototype.push.apply(technologies, project['technologies']); //merge objects in array
+  technologies = [...new Set(technologies)]; //remove duplicate elements
 });
-// console.log({ langs });
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    maxWidth: '600px',
+  },
+};
+
+Modal.setAppElement('#root');
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -52,25 +75,47 @@ const Projects = () => {
             // return project['name'].toLowerCase().includes(text.toLowerCase());
             return (
               project['name'].toLowerCase().includes(text.toLowerCase()) ||
-              project['langs'].includes(text)
+              project['types'].includes(text) ||
+              project['languages'].includes(text) ||
+              project['technologies'].includes(text)
             );
           })
         );
   };
 
-  const filterSwitchHandler = (filterSwitch) => {
-    setFilterSwitch(!filterSwitch);
-    if (filterSwitch) setFilteredProjects(projects);
-  };
+  // const filterSwitchHandler = (filterSwitch) => {
+  //   setFilterSwitch(!filterSwitch);
+  //   if (filterSwitch) setFilteredProjects(projects);
+  // };
 
   const filterLangHandler = (lang) => {
     setFilterLang(lang);
+    closeModal(true);
     setFilteredProjects(
       projects.filter((project) => {
-        return project['langs'].includes(lang);
+        return (
+          project['types'].includes(lang) ||
+          project['languages'].includes(lang) ||
+          project['technologies'].includes(lang)
+        );
       })
     );
   };
+
+  var subtitle;
+  const [modalIsOpen, setIsOpen] = useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   // console.log({ filteredProjects });
 
@@ -88,7 +133,8 @@ const Projects = () => {
       <ProjectMenuWrapper>
         <ProjectFilterButtonWrapper
           filterSwitch={filterSwitch}
-          onClick={() => filterSwitchHandler(filterSwitch)}
+          // onClick={() => filterSwitchHandler(filterSwitch)}
+          onClick={openModal}
         >
           <FaFilter />
         </ProjectFilterButtonWrapper>
@@ -101,10 +147,39 @@ const Projects = () => {
           <ProjectSearchIcon />
         </ProjectSearchWrapper>
       </ProjectMenuWrapper>
-      {filterSwitch ? (
+      {/* {filterSwitch ? ( */}
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel='Project Filter Modal'
+      >
         <Fade top cascade>
           <LangListWrapper>
-            {langs.map((lang, key) => (
+            {types.map((type, key) => (
+              <LangList
+                key={key}
+                filterLang={filterLang === type}
+                onClick={() => filterLangHandler(type)}
+              >
+                {type}
+              </LangList>
+            ))}
+          </LangListWrapper>
+          <LangListWrapper>
+            {languages.map((language, key) => (
+              <LangList
+                key={key}
+                filterLang={filterLang === language}
+                onClick={() => filterLangHandler(language)}
+              >
+                {language}
+              </LangList>
+            ))}
+          </LangListWrapper>
+          <LangListWrapper>
+            {technologies.map((lang, key) => (
               <LangList
                 key={key}
                 filterLang={filterLang === lang}
@@ -115,9 +190,10 @@ const Projects = () => {
             ))}
           </LangListWrapper>
         </Fade>
-      ) : (
+      </Modal>
+      {/* ) : (
         ''
-      )}
+      )} */}
       <ProjectsP>
         <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
         Project(s) found!
@@ -141,8 +217,13 @@ const Projects = () => {
                     />
                     <ProjectCoords>
                       <ProjectLangWrapper>
-                        {project.langs.map((lang, langKey) => (
-                          <ProjectLang key={langKey}>{lang}</ProjectLang>
+                        {project.languages.map((language, langKey) => (
+                          <ProjectLang key={langKey}>{language}</ProjectLang>
+                        ))}
+                      </ProjectLangWrapper>
+                      <ProjectLangWrapper>
+                        {project.technologies.map((technology, techKey) => (
+                          <ProjectLang key={techKey}>{technology}</ProjectLang>
                         ))}
                       </ProjectLangWrapper>
                     </ProjectCoords>
@@ -171,6 +252,11 @@ const Projects = () => {
                     }
                     alt={project.name}
                   />
+                  <ProjectLangWrapper>
+                    {project.types.map((type, typeKey) => (
+                      <ProjectLang key={typeKey}>{type}</ProjectLang>
+                    ))}
+                  </ProjectLangWrapper>
                   <div>
                     {project.details.map((detail, detailKey) => (
                       <ProjectsDetails key={detailKey}>
@@ -178,7 +264,7 @@ const Projects = () => {
                       </ProjectsDetails>
                     ))}
                   </div>
-
+                  <br />
                   {window.innerWidth > 480 ? (
                     <ProjectsMore>
                       Mouse over the CARD for more info

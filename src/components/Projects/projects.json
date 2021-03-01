@@ -6,7 +6,9 @@
       "You can pick people and chat with people in my favorite movie Titanic.",
       "Multiple users can access this application and communicate in real time."
     ],
-    "langs": [
+    "types": ["Chat"],
+    "languages": ["JavaScript"],
+    "technologies": [
       "Node.JS",
       "Express",
       "Socket.IO",
@@ -24,7 +26,9 @@
       "This is about a sports club management and it's not a real website.",
       "The website can do CRUD (Create, Read, Update and Delete)."
     ],
-    "langs": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
     "link": "http://jksportsclub.jaeyoungkim.codes/"
   },
@@ -36,18 +40,22 @@
       "You can remotely play this game with people.",
       "(You can see the speculation on the other side in real-time.)"
     ],
-    "langs": ["Java", "JavaFX"],
+    "types": ["Game"],
+    "languages": ["Java"],
+    "technologies": ["JavaFX", "Multi-Thred", "Socket"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
     "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
   },
   {
-    "name": "Chat with Titanic2",
+    "name": "Chat with Titanic-2",
     "img": "chatwithtitanic.svg",
     "details": [
       "You can pick people and chat with people in my favorite movie Titanic.",
       "Multiple users can access this application and communicate in real time."
     ],
-    "langs": [
+    "types": ["Chat"],
+    "languages": ["JavaScript"],
+    "technologies": [
       "Node.JS",
       "Express",
       "Socket.IO",
@@ -59,25 +67,29 @@
     "link": "http://chatwithtitanic.jaeyoungkim.codes/"
   },
   {
-    "name": "JK Sports Club2",
+    "name": "JK Sports Club-2",
     "img": "jksportsclub.svg",
     "details": [
       "This is about a sports club management and it's not a real website.",
       "The website can do CRUD (Create, Read, Update and Delete)."
     ],
-    "langs": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
     "link": "http://jksportsclub.jaeyoungkim.codes/"
   },
   {
-    "name": "Battleship Game2",
+    "name": "Battleship Game-2",
     "img": "battleship.svg",
     "details": [
       "This is based on the battleship board game.",
       "You can remotely play this game with people.",
       "(You can see the speculation on the other side in real-time.)"
     ],
-    "langs": ["Java", "JavaFX"],
+    "types": ["Game"],
+    "languages": ["Java"],
+    "technologies": ["JavaFX", "Multi-Thred", "Socket"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
     "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
   }
