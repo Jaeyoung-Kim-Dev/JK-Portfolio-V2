@@ -2,7 +2,13 @@ import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Modal from 'react-modal';
 import projects from './projects.json';
-import { LangListWrapper, LangList } from './ProjectsElements';
+import {
+  LangListWrapper,
+  LangList,
+  ProjectsH1,
+  ModalCloseButton,
+  LangFilterAll,
+} from './ProjectsElements';
 import './style.css';
 
 let types = [];
@@ -30,6 +36,7 @@ const customStyles = {
     flexWrap: 'wrap',
     maxWidth: '600px',
     background: '#000',
+    borderRadius: '10px',
   },
 };
 
@@ -43,20 +50,24 @@ const FilterModal = (props) => {
     setIsOpen,
     filterLang,
     setFilterLang,
+    searchField,
   } = props;
 
   const filterLangHandler = (lang) => {
     setFilterLang(lang);
     closeModal(true);
-    setFilteredProjects(
-      projects.filter((project) => {
-        return (
-          project['types'].includes(lang) ||
-          project['languages'].includes(lang) ||
-          project['technologies'].includes(lang)
-        );
-      })
-    );
+    searchField.current.value = '';
+    lang
+      ? setFilteredProjects(
+          projects.filter((project) => {
+            return (
+              project['types'].includes(lang) ||
+              project['languages'].includes(lang) ||
+              project['technologies'].includes(lang)
+            );
+          })
+        )
+      : setFilteredProjects(projects);
   };
 
   function closeModal() {
@@ -64,23 +75,26 @@ const FilterModal = (props) => {
     document.body.style.overflow = 'unset'; // allow scrolling once modal close
   }
 
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   // subtitle.style.color = '#f00';
-  // }
-
-  // console.log({ filteredProjects });
-
   return (
     <Modal
       isOpen={modalIsOpen}
       // onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
       style={customStyles}
-      closeTimeoutMS={300}
+      closeTimeoutMS={150}
       contentLabel='Project Filter Modal'
     >
       <Zoom cascade>
+        <ProjectsH1>Filter Projects</ProjectsH1>
+        <ModalCloseButton onClick={closeModal}>x</ModalCloseButton>
+        <LangListWrapper>
+          <LangFilterAll
+            filterLang={filterLang === ''}
+            onClick={() => filterLangHandler('')}
+          >
+            All
+          </LangFilterAll>
+        </LangListWrapper>
         <LangListWrapper>
           {types.map((type, key) => (
             <LangList

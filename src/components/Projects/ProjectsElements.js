@@ -3,7 +3,8 @@ import { FaSearch } from 'react-icons/fa';
 
 export const ProjectsContainer = styled.div`
   height: 90vh;
-  max-height: 950px;
+  min-height: 800px;
+  max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,7 +16,6 @@ export const ProjectsContainer = styled.div`
   @media screen and (max-width: 768px) {
     height: auto;
     padding-top: 5vh;
-    padding-bottom: 5vh;
   }
 `;
 
@@ -56,7 +56,7 @@ export const ProjectsCard = styled.div`
   overflow: hidden;
   position: relative;
   /* margin: 1rem; */
-  margin: 5vh;
+  margin: 40px 0 20px;
   outline: none;
 
   @media not all and (pointer: coarse) {
@@ -109,7 +109,7 @@ export const ProjectsP = styled.p`
   position: relative;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
 `;
@@ -120,6 +120,23 @@ export const ProjectLangWrapper = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   justify-content: center;
+
+  &::after {
+    content: '';
+    width: 100%;
+    margin: 5px;
+    border: 1px solid #fff;
+  }
+`;
+
+export const ProjectType = styled.li`
+  border-radius: 10px;
+  border-color: none;
+  padding: 4px 10px;
+  margin: 5px;
+  background: #8ebeef;
+  color: #fff;
+  font-size: 1.2rem;
 `;
 
 export const ProjectLang = styled.li`
@@ -128,6 +145,16 @@ export const ProjectLang = styled.li`
   padding: 5px;
   margin: 5px;
   background: #000;
+  color: #fff;
+  font-size: 0.8rem;
+`;
+
+export const ProjectTech = styled.li`
+  border-radius: 10px;
+  border-color: none;
+  padding: 5px;
+  margin: 5px;
+  background: #06357b;
   color: #fff;
   font-size: 0.8rem;
 `;
@@ -143,10 +170,7 @@ export const ProjectFilterButtonWrapper = styled.div`
   border-radius: 10px;
   border: 1px solid;
   border-radius: 4px;
-  /* background: #000; */
-  /* background: #fff; */
   color: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
-  transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
   font-size: '1.2rem';
   margin-right: 15px;
   padding: 10px 10px 5px 10px;
@@ -326,6 +350,36 @@ export const LangList = styled.div`
   /* cursor: pointer; */
   background: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
   transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
+
+  &:hover {
+    transform: scale(1.2);
+    background: #8ebeef;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+`;
+
+export const ModalCloseButton = styled.div`
+  right: 20px;
+  top: 10px;
+  font-size: 2rem;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+`;
+
+export const LangFilterAll = styled.div`
+  /* background: #000; */
+  background: #fff;
+  /* color: #fff; */
+  padding: 5px;
+  margin: 7px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  /* cursor: pointer; */
+  background: ${({ filterLang }) => (!filterLang ? '#8ebeef' : '#fff')};
+  transform: ${({ filterLang }) => (!filterLang ? 'scale(1.2)' : '')};
 
   &:hover {
     transform: scale(1.2);

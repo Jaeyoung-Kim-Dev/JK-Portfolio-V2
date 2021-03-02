@@ -14,6 +14,8 @@ import {
   ProjectsDetails,
   ProjectLangWrapper,
   ProjectLang,
+  ProjectTech,
+  ProjectType,
   ProjectsMore,
   ProjectsLink,
   ProjectsIcon,
@@ -27,14 +29,15 @@ const CarouselCard = (props) => {
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 500, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 700, itemsToShow: 2, itemsToScroll: 2 },
     { width: 870, itemsToShow: 3, itemsToScroll: 3 },
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
     { width: 1700, itemsToShow: 5, itemsToScroll: 5 },
   ];
 
+  console.log(filteredProjects);
   return (
-    <Carousel breakPoints={breakPoints} showArrows={window.innerWidth > 480}>
+    <Carousel breakPoints={breakPoints}>
       {filteredProjects.map((project, key) => (
         <Fade right>
           <ProjectsCard key={key}>
@@ -53,7 +56,7 @@ const CarouselCard = (props) => {
                   </ProjectLangWrapper>
                   <ProjectLangWrapper>
                     {project.technologies.map((technology, techKey) => (
-                      <ProjectLang key={techKey}>{technology}</ProjectLang>
+                      <ProjectTech key={techKey}>{technology}</ProjectTech>
                     ))}
                   </ProjectLangWrapper>
                 </ProjectCoords>
@@ -82,7 +85,7 @@ const CarouselCard = (props) => {
               />
               <ProjectLangWrapper>
                 {project.types.map((type, typeKey) => (
-                  <ProjectLang key={typeKey}>{type}</ProjectLang>
+                  <ProjectType key={typeKey}>{type}</ProjectType>
                 ))}
               </ProjectLangWrapper>
               <div>

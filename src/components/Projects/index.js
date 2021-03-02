@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FaFilter } from 'react-icons/fa';
 import Modal from 'react-modal';
 import projects from './projects.json';
@@ -23,6 +23,7 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [filterLang, setFilterLang] = useState();
   const [modalIsOpen, setIsOpen] = useState(false);
+  const searchField = useRef();
 
   function openModal() {
     setIsOpen(true);
@@ -30,6 +31,7 @@ const Projects = () => {
   }
 
   const searchProject = (text) => {
+    setFilterLang('');
     text === ''
       ? setFilteredProjects(projects)
       : setFilteredProjects(
@@ -59,11 +61,13 @@ const Projects = () => {
           setIsOpen={setIsOpen}
           filterLang={filterLang}
           setFilterLang={setFilterLang}
+          searchField={searchField}
         />
         <ProjectSearchWrapper>
           <ProjectSearchBar
             type={'text'}
             placeholder={'Search'}
+            ref={searchField}
             onChange={(e) => searchProject(e.target.value)}
           />
           <ProjectSearchIcon />
