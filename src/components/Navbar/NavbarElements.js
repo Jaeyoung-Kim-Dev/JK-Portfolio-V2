@@ -96,21 +96,60 @@ export const NavBtn = styled.nav`
   }
 `;
 
+// export const NavBtnLink = styled(LinkR)`
+//   border-radius: 5px;
+//   background: #fff14f;
+//   box-shadow: inset 0 0 0 0 #0095ff;
+//   white-space: nowrap;
+//   padding: 10px 22px;
+//   color: #010606;
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: ease-out 0.4s;
+//   text-decoration: none;
+//   &:hover {
+//     color: #fff;
+//     box-shadow: inset 300px 0 0 0 #0095ff;
+//   }
+// `;
 export const NavBtnLink = styled(LinkR)`
   border-radius: 5px;
-  background: #fff14f;
-  box-shadow: inset 0 0 0 0 #0095ff;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
+  color: #fff;
   font-size: 16px;
+  padding: 10px 22px;
   outline: none;
-  border: none;
+  border: 3px solid #fff14f;
   cursor: pointer;
+  position: relative;
   transition: ease-out 0.4s;
   text-decoration: none;
+  z-index: 1;
+
   &:hover {
     color: #fff;
-    box-shadow: inset 300px 0 0 0 #0095ff;
+    cursor: pointer;
+    border: 3px solid #0095ff;
+  }
+
+  &::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #0095ff;
+  }
+
+  &:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
   }
 `;
