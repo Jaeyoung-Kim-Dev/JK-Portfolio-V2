@@ -20,6 +20,7 @@ export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 90vh;
+  min-height: 800px;
   max-height: 1050px;
   width: 100%;
   max-width: 1100px;

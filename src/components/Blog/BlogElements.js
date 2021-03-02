@@ -28,6 +28,7 @@ export const BlogWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 90vh;
+  min-height: 800px;
   max-height: 950px;
   width: 100%;
   max-width: 1100px;

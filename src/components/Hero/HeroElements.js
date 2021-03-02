@@ -10,6 +10,8 @@ export const HeroContainer = styled.div`
   align-items: center;
   padding: 0 30px;
   height: 100vh;
+  /* min-height: 800px; */
+  max-height: 1050px;
   position: relative;
   z-index: 1;
 
