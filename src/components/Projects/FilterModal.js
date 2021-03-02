@@ -8,6 +8,7 @@ import {
   ProjectsH1,
   ModalCloseButton,
   LangFilterAll,
+  ProjectsP,
 } from './ProjectsElements';
 import './style.css';
 
@@ -35,7 +36,7 @@ const customStyles = {
     flexDirection: 'column',
     flexWrap: 'wrap',
     maxWidth: '600px',
-    background: '#000',
+    background: '#00223D',
     borderRadius: '10px',
   },
 };
@@ -57,8 +58,9 @@ const FilterModal = (props) => {
     setFilterLang(lang);
     closeModal(true);
     searchField.current.value = '';
-    lang
-      ? setFilteredProjects(
+    lang === 'All'
+      ? setFilteredProjects(projects)
+      : setFilteredProjects(
           projects.filter((project) => {
             return (
               project['types'].includes(lang) ||
@@ -66,8 +68,7 @@ const FilterModal = (props) => {
               project['technologies'].includes(lang)
             );
           })
-        )
-      : setFilteredProjects(projects);
+        );
   };
 
   function closeModal() {
@@ -86,15 +87,17 @@ const FilterModal = (props) => {
     >
       <Zoom cascade>
         <ProjectsH1>Filter Projects</ProjectsH1>
+
         <ModalCloseButton onClick={closeModal}>x</ModalCloseButton>
         <LangListWrapper>
           <LangFilterAll
-            filterLang={filterLang === ''}
-            onClick={() => filterLangHandler('')}
+            filterLang={filterLang === 'All'}
+            onClick={() => filterLangHandler('All')}
           >
             All
           </LangFilterAll>
         </LangListWrapper>
+        <ProjectsP>Type:</ProjectsP>
         <LangListWrapper>
           {types.map((type, key) => (
             <LangList
@@ -106,6 +109,7 @@ const FilterModal = (props) => {
             </LangList>
           ))}
         </LangListWrapper>
+        <ProjectsP>Language:</ProjectsP>
         <LangListWrapper>
           {languages.map((language, key) => (
             <LangList
@@ -117,6 +121,7 @@ const FilterModal = (props) => {
             </LangList>
           ))}
         </LangListWrapper>
+        <ProjectsP>Technology:</ProjectsP>
         <LangListWrapper>
           {technologies.map((lang, key) => (
             <LangList
