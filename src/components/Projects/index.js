@@ -7,7 +7,7 @@ import CarouselCard from './CarouselCard';
 import {
   ProjectsContainer,
   ProjectsH1,
-  ProjectsP,
+  ProjectsCounter,
   ProjectsWrapper,
   ProjectMenuWrapper,
   ProjectFilterButtonWrapper,
@@ -21,7 +21,7 @@ Modal.setAppElement('#root');
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [filterLang, setFilterLang] = useState();
+  const [filterLang, setFilterLang] = useState('All');
   const [modalIsOpen, setIsOpen] = useState(false);
   const searchField = useRef();
 
@@ -31,7 +31,7 @@ const Projects = () => {
   }
 
   const searchProject = (text) => {
-    setFilterLang('');
+    setFilterLang('All');
     text === ''
       ? setFilteredProjects(projects)
       : setFilteredProjects(
@@ -74,10 +74,10 @@ const Projects = () => {
         </ProjectSearchWrapper>
       </ProjectMenuWrapper>
 
-      <ProjectsP>
+      <ProjectsCounter>
         <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
         Project(s) found and coming more!
-      </ProjectsP>
+      </ProjectsCounter>
       <ProjectsWrapper>
         <CarouselCard filteredProjects={filteredProjects} />
       </ProjectsWrapper>

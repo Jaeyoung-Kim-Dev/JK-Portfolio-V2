@@ -53,6 +53,7 @@ export const MobileIcon = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: ${textColor};
+    right: 0;
   }
 `;
 
@@ -96,8 +97,9 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: ${primary};
+  border-radius: 5px;
+  background: #fff14f;
+  box-shadow: inset 0 0 0 0 #0095ff;
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
@@ -105,12 +107,10 @@ export const NavBtnLink = styled(LinkR)`
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: ease-out 0.4s;
   text-decoration: none;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: ${textColor};
-    color: #010606;
+    color: #fff;
+    box-shadow: inset 300px 0 0 0 #0095ff;
   }
 `;

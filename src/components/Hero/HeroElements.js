@@ -205,8 +205,9 @@ export const HeroBtnWrapper = styled.div`
 `;
 
 export const Button = styled(Link)`
-  border-radius: 50px;
-  background: #01bf71;
+  border-radius: 5px;
+  background: #fff14f;
+  box-shadow: inset 0 0 0 0 #0095ff;
   white-space: nowrap;
   padding: 12px 30px;
   color: #010606;
@@ -217,11 +218,12 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
+  transition: ease-out 0.4s;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
+    box-shadow: inset 300px 0 0 0 #0095ff;
+    color: #fff;
   }
 `;
 

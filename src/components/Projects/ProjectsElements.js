@@ -101,6 +101,19 @@ export const ProjectsH1 = styled.h1`
 `;
 
 export const ProjectsP = styled.p`
+  /* font-size: 1.5rem; */
+  /* text-align: center; */
+  /* color: #000; */
+  color: #fff;
+  margin: 0 10px 5px;
+  position: relative;
+
+  @media screen and (max-width: 480px) {
+    /* font-size: 1.2rem; */
+  }
+`;
+
+export const ProjectsCounter = styled.p`
   font-size: 1.5rem;
   text-align: center;
   /* color: #000; */
@@ -170,7 +183,7 @@ export const ProjectFilterButtonWrapper = styled.div`
   border-radius: 10px;
   border: 1px solid;
   border-radius: 4px;
-  color: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
+  color: ${({ filterLang }) => (filterLang !== 'All' ? '#8ebeef' : '#fff')};
   font-size: '1.2rem';
   margin-right: 15px;
   padding: 10px 10px 5px 10px;
@@ -189,6 +202,10 @@ export const ProjectSearchWrapper = styled.div`
   position: relative;
   width: 200px;
   height: 40px;
+
+  @media screen and (max-width: 480px) {
+    width: 150px;
+  }
 `;
 
 export const ProjectSearchBar = styled.input`
@@ -329,9 +346,16 @@ export const ProjectsMore = styled.div`
 
 export const LangListWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 20px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    margin: 5px;
+    border: 1px solid #fff;
+  }
   /* max-width: 80vw; */
 
   @media screen and (max-width: 480px) {
@@ -352,7 +376,7 @@ export const LangList = styled.div`
   transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
 
   &:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     background: #8ebeef;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -373,13 +397,15 @@ export const LangFilterAll = styled.div`
   background: #fff;
   /* color: #fff; */
   padding: 5px;
-  margin: 7px;
-  width: 100px;
+  margin: 20px 7px 7px 7px;
+  width: 50px;
   border-radius: 10px;
   text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   /* cursor: pointer; */
-  background: ${({ filterLang }) => (!filterLang ? '#8ebeef' : '#fff')};
-  transform: ${({ filterLang }) => (!filterLang ? 'scale(1.2)' : '')};
+  background: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
+  transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
 
   &:hover {
     transform: scale(1.2);
