@@ -68,13 +68,17 @@ const CarouselCard = (props) => {
                   >
                     <FaGithub />
                   </ProjectsLink>
-                  <ProjectsLink
-                    href={`${project.link}`}
-                    rel='noreferrer'
-                    target='_blank'
-                  >
-                    <FaExternalLinkAlt />
-                  </ProjectsLink>
+                  {project.link ? (
+                    <ProjectsLink
+                      href={`${project.link}`}
+                      rel='noreferrer'
+                      target='_blank'
+                    >
+                      <FaExternalLinkAlt />
+                    </ProjectsLink>
+                  ) : (
+                    ''
+                  )}
                 </ProjectStats>
               </ProjectsMoreInfo>
             </ProjectsAdditional>
