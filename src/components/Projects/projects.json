@@ -3,15 +3,14 @@
     "name": "Chat with Titanic",
     "img": "chatwithtitanic.svg",
     "details": [
-      "You can pick people and chat with people in my favorite movie Titanic.",
-      "Multiple users can access this application and communicate in real time."
+      "Several people can participate in this application and become characters in the movie Titanic and talk to people."
     ],
     "types": ["Chat"],
     "languages": ["JavaScript"],
     "technologies": [
       "Node.JS",
       "Express",
-      "Socket.IO",
+      "Socket",
       "MongoDB",
       "jQuery",
       "Bootstrap"
@@ -23,8 +22,7 @@
     "name": "JK Sports Club",
     "img": "jksportsclub.svg",
     "details": [
-      "This is about a sports club management and it's not a real website.",
-      "The website can do CRUD (Create, Read, Update and Delete)."
+      "The website is to manage sports club information, reviews and members."
     ],
     "types": ["Management"],
     "languages": ["JavaScript"],
@@ -36,61 +34,26 @@
     "name": "Battleship Game",
     "img": "battleship.svg",
     "details": [
-      "This is based on the battleship board game.",
-      "You can remotely play this game with people.",
-      "(You can see the speculation on the other side in real-time.)"
+      "Based on the battleship board game.",
+      "Two people can play the game remotely and in real time."
     ],
-    "types": ["Game"],
+    "types": ["Game", "Chat"],
     "languages": ["Java"],
     "technologies": ["JavaFX", "Multi-Thread", "Socket"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
-    "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
+    "link": "https://youtu.be/SlMRXH7slQc"
   },
   {
-    "name": "Chat with Titanic-2",
-    "img": "chatwithtitanic.svg",
+    "name": "Manage Computers",
+    "img": "managecomputers.svg",
     "details": [
-      "You can pick people and chat with people in my favorite movie Titanic.",
-      "Multiple users can access this application and communicate in real time."
+      "CLI(Command-Line Interface) based program for managing computers.",
+      "Various Java security technologies are applied"
     ],
-    "types": ["Chat"],
-    "languages": ["JavaScript"],
-    "technologies": [
-      "Node.JS",
-      "Express",
-      "Socket.IO",
-      "MongoDB",
-      "jQuery",
-      "Bootstrap"
-    ],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/chatwithtitanic",
-    "link": "http://chatwithtitanic.jaeyoungkim.codes/"
-  },
-  {
-    "name": "JK Sports Club-2",
-    "img": "jksportsclub.svg",
-    "details": [
-      "This is about a sports club management and it's not a real website.",
-      "The website can do CRUD (Create, Read, Update and Delete)."
-    ],
-    "types": ["Management"],
-    "languages": ["JavaScript"],
-    "technologies": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
-    "link": "http://jksportsclub.jaeyoungkim.codes/"
-  },
-  {
-    "name": "Battleship Game-2",
-    "img": "battleship.svg",
-    "details": [
-      "This is based on the battleship board game.",
-      "You can remotely play this game with people.",
-      "(You can see the speculation on the other side in real-time.)"
-    ],
-    "types": ["Game"],
+    "types": ["Security"],
     "languages": ["Java"],
-    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
-    "link": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game"
+    "technologies": [],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Manage-Computers.git",
+    "link": ""
   }
 ]
