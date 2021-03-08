@@ -267,7 +267,7 @@ export const ProjectTitle = styled.div`
   width: 100%;
   height: 50px;
   padding-top: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
   color: #fff;
