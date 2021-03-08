@@ -39,7 +39,8 @@ const Blog = () => {
                   to share with others or something I want to remember.
                 </Subtitle>
                 <BtnWrap>
-                  <Button>View postings</Button>
+                  {/* <Button>View postings</Button> */}
+                  <Button>Coming Soon!</Button>
                 </BtnWrap>
               </Fade>
             </Column2>

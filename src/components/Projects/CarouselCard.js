@@ -54,11 +54,15 @@ const CarouselCard = (props) => {
                       <ProjectLang key={langKey}>{language}</ProjectLang>
                     ))}
                   </ProjectLangWrapper>
-                  <ProjectLangWrapper>
-                    {project.technologies.map((technology, techKey) => (
-                      <ProjectTech key={techKey}>{technology}</ProjectTech>
-                    ))}
-                  </ProjectLangWrapper>
+                  {project.technologies.length ? (
+                    <ProjectLangWrapper>
+                      {project.technologies.map((technology, techKey) => (
+                        <ProjectTech key={techKey}>{technology}</ProjectTech>
+                      ))}
+                    </ProjectLangWrapper>
+                  ) : (
+                    ''
+                  )}
                 </ProjectCoords>
                 <ProjectStats>
                   <ProjectsLink

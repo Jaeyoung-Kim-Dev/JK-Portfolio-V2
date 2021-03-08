@@ -55,5 +55,30 @@
     "technologies": [],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Manage-Computers.git",
     "link": ""
+  },
+  {
+    "name": "Movie TS Backend API",
+    "img": "movietsbackendapi.svg",
+    "details": [
+      "Back-end API created with NestJS to manage movie lists.",
+      "Create, read, update or delete (CRUD) movies to the list."
+    ],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["NestJS", "TypeScript", "Jest"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Movie-Typescript-Backend-API.git",
+    "link": ""
+  },
+  {
+    "name": "TypeScript Blockchain",
+    "img": "managecomputers.svg",
+    "details": [
+      "Simple application of the basic concept of blockchain and includes various validation."
+    ],
+    "types": ["Blockchain"],
+    "languages": ["JavaScript"],
+    "technologies": ["TypeScript"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Typescript-Blockchain.git",
+    "link": ""
   }
 ]
