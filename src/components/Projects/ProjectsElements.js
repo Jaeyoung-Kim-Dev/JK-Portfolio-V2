@@ -65,20 +65,6 @@ export const ProjectsCard = styled.div`
       border-radius: 0 5px 5px 0;
     }
   }
-
-  /* @media screen and (max-width: 480px) {
-    &:hover > * {
-      height: inherit;
-      border-radius: inherit;
-    }
-  } */
-
-  /* @media screen and (max-width: 480px) {
-    &:hover > * {
-      height: inherit;
-      border-radius: inherit;
-    }
-  } */
 `;
 
 export const ProjectsIcon = styled.img`

@@ -20,7 +20,9 @@ export const BlogContainer = styled.div`
 `;
 
 export const BlogWrapper = styled.div`
-  display: grid;
+  /* display: grid; */
+  display: flex;
+  flex-wrap: wrap;
   z-index: 1;
   height: 90vh;
   min-height: 800px;
@@ -31,46 +33,29 @@ export const BlogWrapper = styled.div`
   margin-left: auto;
   padding: 0 15px;
   justify-content: center;
+  align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 980px) {
     height: auto;
     padding: 0;
+    min-height: 0;
   } ;
 `;
 
-export const BlogRow = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+export const DetailWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  grid-template-areas: 'col1 col2';
-
-  @media screen and (max-width: 768px) {
-    grid-template-areas: 'col1' 'col2';
-  } ;
 `;
 
-export const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 60px;
-  grid-area: col1;
-
-  @media screen and (max-width: 768px) {
-    margin-bottom: 0;
-    padding: 40px;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 20px;
-    height: 200px;
-  }
-`;
-
-export const Column2 = styled.div`
-  padding: 0 15px;
-  grid-area: col2;
+export const TextWrapper = styled.div`
+  max-width: 455px;
+  height: 100%;
+  padding: 20px;
 
   @media screen and (max-width: 768px) {
     padding: 40px;
+    height: auto;
   }
 
   @media screen and (max-width: 480px) {
@@ -79,8 +64,17 @@ export const Column2 = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-  max-width: 555px;
+  max-width: 455px;
   height: 100%;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  margin-right: 5vw;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    margin-right: 0;
+  }
 `;
 
 export const Img = styled.img`
@@ -88,11 +82,6 @@ export const Img = styled.img`
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 `;
-
-// export const TextWrapper = styled.div`
-//   /* max-width: 540px; */
-//   padding-top: 0;
-// `;
 
 export const TopLine = styled.p`
   color: ${topLine};
