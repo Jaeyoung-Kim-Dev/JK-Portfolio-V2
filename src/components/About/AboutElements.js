@@ -10,9 +10,12 @@ const subtitleLight = '#010606';
 export const AboutContainer = styled.div`
   color: #fff;
   background: ${backgroundLight};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media screen and (max-width: 768px) {
-    padding: 50px 0;
+  @media screen and (max-width: 1000px) {
+    padding-top: 80px;
   } ;
 `;
 
@@ -29,42 +32,44 @@ export const AboutWrapper = styled.div`
   padding: 0 15px;
   justify-content: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     height: auto;
   } ;
 `;
 
 export const AboutRow = styled.div`
   display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+  /* grid-auto-columns: minmax(auto, 1fr); */
+  grid-template-columns: auto auto;
   align-items: center;
   grid-template-areas: 'col1 col2';
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     grid-template-areas: 'col1' 'col2';
   } ;
 `;
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 60px;
+  /* margin-bottom: 15px; */
+  /* padding: 60px; */
   grid-area: col1;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     padding: 40px;
   }
 
   @media screen and (max-width: 480px) {
     padding: 20px;
-  } ;
+  } ; */
 `;
 
 export const Column2 = styled.div`
-  padding: 0 15px;
+  padding: 50px;
   grid-area: col2;
+  max-width: 600px;
 
-  @media screen and (max-width: 768px) {
-    padding: 40px;
+  @media screen and (max-width: 1000px) {
+    padding: 30px;
   }
 
   @media screen and (max-width: 480px) {
@@ -73,24 +78,33 @@ export const Column2 = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-  max-width: 555px;
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 15px; */
+
+  @media screen and (max-width: 480px) {
+    padding: 0 10px 30px;
+  } ;
 `;
 
 export const Img = styled.img`
-  width: 100%;
+  width: 300px;
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 `;
 
-export const AboutMsg = styled.div`
+export const BubbleWrapper = styled.div``;
+
+export const Bubble = styled.div`
   position: absolute;
-  max-width: 170px;
+  width: 170px;
   text-align: center;
   font-size: 1.3rem;
   border-radius: 30px;
-  transform: translate(-10%, -50%);
+  transform: translate(-25px, -50%);
   color: #fff;
   background: ${({ bgCorlor }) => bgCorlor};
   padding: 15px;
@@ -108,11 +122,6 @@ export const AboutMsg = styled.div`
     bottom: -24px;
   }
 `;
-
-// export const TextWrapper = styled.div`
-//   /* max-width: 540px; */
-//   padding-top: 0;
-// `;
 
 export const TopLine = styled.p`
   color: ${topLine};

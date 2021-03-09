@@ -6,9 +6,10 @@ import FilterModal from './FilterModal';
 import CarouselCard from './CarouselCard';
 import {
   ProjectsContainer,
+  ProjectsWrapper,
   ProjectsH1,
   ProjectsCounter,
-  ProjectsWrapper,
+  ProjectsCardWrapper,
   ProjectMenuWrapper,
   ProjectFilterButtonWrapper,
   ProjectSearchWrapper,
@@ -61,35 +62,40 @@ const Projects = () => {
 
   return (
     <ProjectsContainer id='projects'>
-      <ProjectsH1>PROJECTS</ProjectsH1>
-      <ProjectMenuWrapper>
-        <ProjectFilterButtonWrapper filterLang={filterLang} onClick={openModal}>
-          <FaFilter /> {filterLang ? '' + filterLang : ' All'}
-        </ProjectFilterButtonWrapper>
-        <FilterModal
-          setFilteredProjects={setFilteredProjects}
-          modalIsOpen={modalIsOpen}
-          setIsOpen={setIsOpen}
-          filterLang={filterLang}
-          setFilterLang={setFilterLang}
-          searchField={searchField}
-        />
-        <ProjectSearchWrapper>
-          <ProjectSearchBar
-            type={'text'}
-            placeholder={'Search'}
-            ref={searchField}
-            onChange={(e) => searchProject(e.target.value)}
-          />
-          <ProjectSearchIcon />
-        </ProjectSearchWrapper>
-      </ProjectMenuWrapper>
-      <ProjectsCounter>
-        <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
-        Project(s) found and coming more!
-      </ProjectsCounter>
       <ProjectsWrapper>
-        <CarouselCard filteredProjects={filteredProjects} />
+        <ProjectsH1>PROJECTS</ProjectsH1>
+        <ProjectMenuWrapper>
+          <ProjectFilterButtonWrapper
+            filterLang={filterLang}
+            onClick={openModal}
+          >
+            <FaFilter /> {filterLang ? '' + filterLang : ' All'}
+          </ProjectFilterButtonWrapper>
+          <FilterModal
+            setFilteredProjects={setFilteredProjects}
+            modalIsOpen={modalIsOpen}
+            setIsOpen={setIsOpen}
+            filterLang={filterLang}
+            setFilterLang={setFilterLang}
+            searchField={searchField}
+          />
+          <ProjectSearchWrapper>
+            <ProjectSearchBar
+              type={'text'}
+              placeholder={'Search'}
+              ref={searchField}
+              onChange={(e) => searchProject(e.target.value)}
+            />
+            <ProjectSearchIcon />
+          </ProjectSearchWrapper>
+        </ProjectMenuWrapper>
+        <ProjectsCounter>
+          <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
+          Project(s) found and coming more!
+        </ProjectsCounter>
+        <ProjectsCardWrapper>
+          <CarouselCard filteredProjects={filteredProjects} />
+        </ProjectsCardWrapper>
       </ProjectsWrapper>
     </ProjectsContainer>
   );
