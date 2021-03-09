@@ -98,6 +98,10 @@ export const ProjectsH1 = styled.h1`
     font-size: 2rem;
     margin-bottom: 20px;
   }
+
+  @media screen and (min-height: 1000px) {
+    margin-top: 5vh;
+  }
 `;
 
 export const ProjectsP = styled.p`
