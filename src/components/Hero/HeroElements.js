@@ -204,7 +204,8 @@ export const HeroBtnWrapper = styled.div`
   align-items: center;
 `;
 
-export const Button = styled(Link)`
+// export const Button = styled(Link)`
+export const Button = styled.a`
   border-radius: 5px;
   background: #fff14f;
   box-shadow: inset 0 0 0 0 #0095ff;
@@ -218,6 +219,7 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   /* transition: all 0.2s ease-in-out; */
   transition: ease-out 0.4s;
 
