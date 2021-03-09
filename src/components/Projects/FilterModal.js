@@ -14,7 +14,7 @@ import './style.css';
 
 let types = [];
 let languages = ['JavaScript', 'Java'];
-let technologies = ['React', 'Node.JS', 'TypeScript']; // priority languages
+let technologies = ['React', 'NodeJS', 'TypeScript', 'Express', 'NestJS']; // priority languages
 projects.forEach((project) => {
   Array.prototype.push.apply(types, project['types']); //merge objects in array
   types = [...new Set(types)]; //remove duplicate elements
