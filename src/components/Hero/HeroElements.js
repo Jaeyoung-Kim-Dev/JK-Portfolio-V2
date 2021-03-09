@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { FaHeart } from 'react-icons/fa';
 

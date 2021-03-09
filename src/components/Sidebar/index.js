@@ -7,7 +7,7 @@ import {
   SidebarMenu,
   SidebarLink,
   SideBtnWrap,
-  SidebarRoute,
+  SidebarBtn,
 } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -30,6 +30,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             <SidebarLink
               key={key}
               to={navItem.itemName.toLowerCase().replace(' ', '')}
+              offset={-document.documentElement.clientHeight * 0.1}
               onClick={toggle}
             >
               {navItem.itemName}
@@ -37,7 +38,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           ))}
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute>RESUME</SidebarRoute>
+          <a
+            href={require('../../Resume(Jaeyoung_Kim).pdf')?.default}
+            target='_blank'
+            rel='noopener noreferrer'
+            download
+          >
+            <SidebarBtn>RESUME</SidebarBtn>
+          </a>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

@@ -38,8 +38,12 @@ const Hero = () => {
         </HeroAniWarpper>
         <HeroP>My Name is JAEYOUNG KIM</HeroP>
         <HeroBtnWrapper>
-          <Button href="mailto:jaeyoung.kim.dev@gmail.com?subject=Mail from Jaeyoung's Website&body=Hello, Jaeyoung!">
-            Contact{hover ? <ArrowForward /> : <ArrowRight />}
+          <Button
+            href="mailto:jaeyoung.kim.dev@gmail.com?subject=Mail from Jaeyoung's Website&body=Hello, Jaeyoung!"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+          >
+            Contact {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

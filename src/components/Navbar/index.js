@@ -43,7 +43,7 @@ const Navbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <Navlogo to='/' onClick={toggleHome}>
-              Jaeyoung Kim
+              JAEYOUNG KIM
             </Navlogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
@@ -66,7 +66,7 @@ const Navbar = ({ toggle }) => {
             </NavMenu>
             <NavBtnWrapper>
               <a
-                href={require(`../../Resume(Jaeyoung_Kim).pdf`)}
+                href={require('../../Resume(Jaeyoung_Kim).pdf')?.default}
                 target='_blank'
                 rel='noopener noreferrer'
                 download
@@ -75,16 +75,6 @@ const Navbar = ({ toggle }) => {
                   RESUME
                 </NavBtn>
               </a>
-              {/* <NavBtnLink
-                to='/signin'
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'
-                offset={document.documentElement.clientHeight * 0.1}
-              >
-                RESUME
-              </NavBtnLink> */}
             </NavBtnWrapper>
           </NavbarContainer>
         </Nav>
