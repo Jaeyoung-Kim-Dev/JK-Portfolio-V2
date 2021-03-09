@@ -38,6 +38,9 @@ const Projects = () => {
           projects.filter((project) => {
             return (
               project['name'].toLowerCase().includes(text.toLowerCase()) ||
+              Object.keys(project['details']).some((k) =>
+                project['details'][k].toLowerCase().includes(text.toLowerCase())
+              ) ||
               Object.keys(project['types']).some((k) =>
                 project['types'][k].toLowerCase().includes(text.toLowerCase())
               ) ||

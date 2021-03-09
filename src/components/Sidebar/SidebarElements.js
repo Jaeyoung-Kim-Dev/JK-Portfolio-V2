@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 import { FaTimes } from 'react-icons/fa';
 
@@ -38,11 +37,11 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(5, 100px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(5, 80px);
   }
 `;
 
@@ -69,9 +68,10 @@ export const SideBtnWrap = styled.div`
   justify-content: center;
 `;
 
-export const SidebarRoute = styled(LinkR)`
+export const SidebarBtn = styled.button`
   border-radius: 5px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   font-size: 16px;
   padding: 10px 22px;
   outline: none;
@@ -81,30 +81,4 @@ export const SidebarRoute = styled(LinkR)`
   transition: ease-out 0.4s;
   text-decoration: none;
   z-index: 1;
-
-  &:hover {
-    color: #fff;
-    cursor: pointer;
-    border: 3px solid #0095ff;
-  }
-
-  &::before {
-    transition: 0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: #0095ff;
-  }
-
-  &:hover::before {
-    transition: 0.5s all ease;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-  }
 `;

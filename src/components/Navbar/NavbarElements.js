@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-const primary = '#01BF71';
+const primary = '#fff14f';
+const secondary = '#0095ff';
 const textColor = '#fff';
 
 export const Nav = styled.nav`
@@ -43,11 +44,13 @@ export const Navlogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  font-family: 'Knewave', cursive;
+  text-shadow: 4px 3px 5px #ff0000;
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 750px) {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -63,7 +66,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 750px) {
     display: none;
   }
 `;
@@ -88,7 +91,7 @@ export const NavLinks = styled(LinkS)`
   }
 `;
 
-export const NavBtnWrapper = styled.nav`
+export const NavBtnWrapper = styled.div`
   display: flex;
   align-items: center;
   @media screen and (max-width: 480px) {
@@ -103,7 +106,7 @@ export const NavBtn = styled.button`
   font-size: 16px;
   padding: 10px 22px;
   outline: none;
-  border: 3px solid #fff14f;
+  border: 3px solid ${primary};
   cursor: pointer;
   position: relative;
   transition: ease-out 0.4s;
@@ -113,7 +116,7 @@ export const NavBtn = styled.button`
   &:hover {
     color: #fff;
     cursor: pointer;
-    border: 3px solid #0095ff;
+    border: 3px solid ${secondary};
   }
 
   &::before {
@@ -125,7 +128,7 @@ export const NavBtn = styled.button`
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #0095ff;
+    background-color: ${secondary};
   }
 
   &:hover::before {

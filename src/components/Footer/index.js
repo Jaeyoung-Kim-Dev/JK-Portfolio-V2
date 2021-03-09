@@ -11,11 +11,10 @@ import {
   SocialIconLink,
 } from './FooterElements';
 import {
-  FaInstagram,
-  FaFacebook,
-  FaYoutube,
-  FaTwitter,
+  FaGithub,
   FaLinkedin,
+  FaStackOverflow,
+  FaRegCopyright,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -32,24 +31,16 @@ const Footer = () => {
               JK
             </SocialLogo>
             <WebsiteRights>
-              JK Copyright {new Date().getFullYear()} All rights reserved.
+              DEVELOPED BY JAEYOUNG KIM <FaRegCopyright />{' '}
+              {new Date().getFullYear()}
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href='/' target='_blank' arial-label='Facebook'>
-                <FaFacebook />
-              </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' arial-label='Instagram'>
-                <FaInstagram />
-              </SocialIconLink>
               <SocialIconLink
-                href='www.youtube.com'
+                href='https://github.com/Jaeyoung-Kim-Dev'
                 target='_blank'
-                arial-label='Youtube'
+                arial-label='Github'
               >
-                <FaYoutube />
-              </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' arial-label='Twitter'>
-                <FaTwitter />
+                <FaGithub />
               </SocialIconLink>
               <SocialIconLink
                 href='https://www.linkedin.com/in/jaeyoung-kim-dev/'
@@ -57,6 +48,13 @@ const Footer = () => {
                 arial-label='Linkedin'
               >
                 <FaLinkedin />
+              </SocialIconLink>
+              <SocialIconLink
+                href='https://stackoverflow.com/users/13967287/jaeyoung-kim'
+                target='_blank'
+                arial-label='StackOverflow'
+              >
+                <FaStackOverflow />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

@@ -26,7 +26,7 @@
     ],
     "types": ["Management"],
     "languages": ["JavaScript"],
-    "technologies": ["React", "Node.JS", "Express", "MongoDB", "Bootstrap"],
+    "technologies": ["React", "NodeJS", "Express", "MongoDB", "Bootstrap"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
     "link": "http://jksportsclub.jaeyoungkim.codes/"
   },
