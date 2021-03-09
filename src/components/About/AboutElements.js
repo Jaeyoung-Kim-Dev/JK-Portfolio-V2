@@ -91,6 +91,7 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   width: 300px;
+  height: 371.13px;
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
