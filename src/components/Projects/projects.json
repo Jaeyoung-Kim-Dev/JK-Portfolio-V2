@@ -8,7 +8,7 @@
     "types": ["Chat"],
     "languages": ["JavaScript"],
     "technologies": [
-      "Node.JS",
+      "NodeJS",
       "Express",
       "Socket",
       "MongoDB",
@@ -65,7 +65,7 @@
     ],
     "types": ["Management"],
     "languages": ["JavaScript"],
-    "technologies": ["NestJS", "TypeScript", "Jest"],
+    "technologies": ["NestJS", "TypeScript", "Jest", "NodeJS"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Movie-Typescript-Backend-API.git",
     "link": ""
   },
@@ -77,7 +77,7 @@
     ],
     "types": ["Blockchain"],
     "languages": ["JavaScript"],
-    "technologies": ["TypeScript"],
+    "technologies": ["TypeScript", "NodeJS"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Typescript-Blockchain.git",
     "link": ""
   }

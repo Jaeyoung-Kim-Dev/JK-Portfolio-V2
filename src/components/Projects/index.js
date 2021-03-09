@@ -36,13 +36,21 @@ const Projects = () => {
       ? setFilteredProjects(projects)
       : setFilteredProjects(
           projects.filter((project) => {
-            console.log(project['langs']);
-            // return project['name'].toLowerCase().includes(text.toLowerCase());
             return (
               project['name'].toLowerCase().includes(text.toLowerCase()) ||
-              project['types'].includes(text) ||
-              project['languages'].includes(text) ||
-              project['technologies'].includes(text)
+              Object.keys(project['types']).some((k) =>
+                project['types'][k].toLowerCase().includes(text.toLowerCase())
+              ) ||
+              Object.keys(project['languages']).some((k) =>
+                project['languages'][k]
+                  .toLowerCase()
+                  .includes(text.toLowerCase())
+              ) ||
+              Object.keys(project['technologies']).some((k) =>
+                project['technologies'][k]
+                  .toLowerCase()
+                  .includes(text.toLowerCase())
+              )
             );
           })
         );
