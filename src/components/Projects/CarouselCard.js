@@ -38,8 +38,8 @@ const CarouselCard = (props) => {
   console.log(filteredProjects);
   return (
     <Carousel breakPoints={breakPoints}>
-      {filteredProjects.map((project, key) => (
-        <Fade right cascade>
+      <Fade right cascade>
+        {filteredProjects.map((project, key) => (
           <ProjectsCard key={key}>
             <ProjectsAdditional>
               <ProjectTitle>{project.name}</ProjectTitle>
@@ -109,8 +109,8 @@ const CarouselCard = (props) => {
               )}
             </ProjectsGeneral>
           </ProjectsCard>
-        </Fade>
-      ))}
+        ))}
+      </Fade>
     </Carousel>
   );
 };
