@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import projects from './projects.json';
 import FilterModal from './FilterModal';
 import CarouselCard from './CarouselCard';
+import Table from './Table';
 import {
   ProjectsContainer,
   ProjectsH1,
@@ -81,13 +82,13 @@ const Projects = () => {
           <ProjectSearchIcon />
         </ProjectSearchWrapper>
       </ProjectMenuWrapper>
-
       <ProjectsCounter>
         <span style={{ color: 'gold' }}>{filteredProjects.length}</span>{' '}
         Project(s) found and coming more!
       </ProjectsCounter>
       <ProjectsWrapper>
-        <CarouselCard filteredProjects={filteredProjects} />
+        {/* <CarouselCard filteredProjects={filteredProjects} /> */}
+        <Table filteredProjects={filteredProjects} />
       </ProjectsWrapper>
     </ProjectsContainer>
   );

@@ -8,8 +8,8 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavBtnWrapper,
   NavBtn,
-  NavBtnLink,
 } from './NavbarElements';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
@@ -64,8 +64,18 @@ const Navbar = ({ toggle }) => {
                 </NavItem>
               ))}
             </NavMenu>
-            <NavBtn>
-              <NavBtnLink
+            <NavBtnWrapper>
+              <a
+                href={require(`../../Resume(Jaeyoung_Kim).pdf`)}
+                target='_blank'
+                rel='noopener noreferrer'
+                download
+              >
+                <NavBtn offset={document.documentElement.clientHeight * 0.1}>
+                  RESUME
+                </NavBtn>
+              </a>
+              {/* <NavBtnLink
                 to='/signin'
                 smooth={true}
                 duration={500}
@@ -74,8 +84,8 @@ const Navbar = ({ toggle }) => {
                 offset={document.documentElement.clientHeight * 0.1}
               >
                 RESUME
-              </NavBtnLink>
-            </NavBtn>
+              </NavBtnLink> */}
+            </NavBtnWrapper>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
