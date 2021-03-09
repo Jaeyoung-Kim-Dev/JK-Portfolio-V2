@@ -87,8 +87,7 @@ const Projects = () => {
         Project(s) found and coming more!
       </ProjectsCounter>
       <ProjectsWrapper>
-        {/* <CarouselCard filteredProjects={filteredProjects} /> */}
-        <Table filteredProjects={filteredProjects} />
+        <CarouselCard filteredProjects={filteredProjects} />
       </ProjectsWrapper>
     </ProjectsContainer>
   );
