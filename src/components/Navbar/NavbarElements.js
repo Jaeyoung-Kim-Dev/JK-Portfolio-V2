@@ -88,7 +88,7 @@ export const NavLinks = styled(LinkS)`
   }
 `;
 
-export const NavBtn = styled.nav`
+export const NavBtnWrapper = styled.nav`
   display: flex;
   align-items: center;
   @media screen and (max-width: 480px) {
@@ -96,27 +96,10 @@ export const NavBtn = styled.nav`
   }
 `;
 
-// export const NavBtnLink = styled(LinkR)`
-//   border-radius: 5px;
-//   background: #fff14f;
-//   box-shadow: inset 0 0 0 0 #0095ff;
-//   white-space: nowrap;
-//   padding: 10px 22px;
-//   color: #010606;
-//   font-size: 16px;
-//   outline: none;
-//   border: none;
-//   cursor: pointer;
-//   transition: ease-out 0.4s;
-//   text-decoration: none;
-//   &:hover {
-//     color: #fff;
-//     box-shadow: inset 300px 0 0 0 #0095ff;
-//   }
-// `;
-export const NavBtnLink = styled(LinkR)`
+export const NavBtn = styled.button`
   border-radius: 5px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   font-size: 16px;
   padding: 10px 22px;
   outline: none;
