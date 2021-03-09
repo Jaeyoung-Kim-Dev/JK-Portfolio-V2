@@ -7,7 +7,8 @@ import {
   AboutRow,
   Column1,
   ImgWrap,
-  AboutMsg,
+  BubbleWrapper,
+  Bubble,
   Img,
   Column2,
   TopLine,
@@ -19,23 +20,22 @@ import {
 const bubbles = [
   'Well done! You made it!',
   'Beautiful! Almost there!',
-  'Excellent! Try another shot?',
   'Good job! One more!',
   'Please touch Lego blocks!',
 ];
 
-const bgCorlors = ['#6f0808', '#086f23', '#6f3308', '#5f086f', '#080b6f'];
+const bgCorlors = ['#6f0808', '#086f23', '#5f086f', '#080b6f'];
 
 const About = () => {
-  const [photoNumber, setPhotoNumber] = useState(4);
+  const [photoNumber, setPhotoNumber] = useState(3);
   // const [bubbles, setBubbles] = useState([]);
-  const [currentBubble, setCurrentBubble] = useState(bubbles[4]);
-  const [bgColor, setBgColor] = useState(bgCorlors[4]);
+  const [currentBubble, setCurrentBubble] = useState(bubbles[3]);
+  const [bgColor, setBgColor] = useState(bgCorlors[3]);
 
   const myNextPhoto = () => {
-    setPhotoNumber(photoNumber === 0 ? 4 : photoNumber - 1);
-    setCurrentBubble(photoNumber === 0 ? bubbles[4] : bubbles[photoNumber - 1]);
-    setBgColor(photoNumber === 0 ? bgCorlors[4] : bgCorlors[photoNumber - 1]);
+    setPhotoNumber(photoNumber === 0 ? 3 : photoNumber - 1);
+    setCurrentBubble(photoNumber === 0 ? bubbles[3] : bubbles[photoNumber - 1]);
+    setBgColor(photoNumber === 0 ? bgCorlors[3] : bgCorlors[photoNumber - 1]);
   };
 
   return (
@@ -46,7 +46,9 @@ const About = () => {
             <Column1>
               <ImgWrap>
                 <Flip left>
-                  <AboutMsg bgCorlor={bgColor}>{currentBubble}</AboutMsg>
+                  <BubbleWrapper>
+                    <Bubble bgCorlor={bgColor}>{currentBubble}</Bubble>
+                  </BubbleWrapper>
                 </Flip>
                 <Img
                   src={
