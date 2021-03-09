@@ -38,17 +38,6 @@ const About = () => {
     setBgColor(photoNumber === 0 ? bgCorlors[4] : bgCorlors[photoNumber - 1]);
   };
 
-  // useEffect(() => {
-  //   fetch('./JSON/aboutBubbles.json')
-  //     .then((response) => response.json())
-  //     .then((result) => setBubbles(result));
-  //   // setCurrentBubble(bubbles[0].comment);
-  // }, []);
-
-  // console.log(bubbles[0]);
-  // console.log(currentBubble);
-
-  // debugger;
   return (
     <>
       <AboutContainer id={'about'}>
@@ -56,7 +45,6 @@ const About = () => {
           <AboutRow>
             <Column1>
               <ImgWrap>
-                {/* <AboutMsg>Keep touching Lego blocks</AboutMsg> */}
                 <Flip left>
                   <AboutMsg bgCorlor={bgColor}>{currentBubble}</AboutMsg>
                 </Flip>

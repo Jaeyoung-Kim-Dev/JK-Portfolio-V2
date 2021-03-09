@@ -61,7 +61,8 @@ export const Column1 = styled.div`
 
   @media screen and (max-width: 480px) {
     padding: 20px;
-  } ;
+    height: 200px;
+  }
 `;
 
 export const Column2 = styled.div`
@@ -73,8 +74,8 @@ export const Column2 = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    padding: 20px;
-  } ;
+    padding: 30px;
+  }
 `;
 
 export const ImgWrap = styled.div`

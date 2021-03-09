@@ -34,6 +34,7 @@ const Footer = () => {
               DEVELOPED BY JAEYOUNG KIM <FaRegCopyright />{' '}
               {new Date().getFullYear()}
             </WebsiteRights>
+
             <SocialIcons>
               <SocialIconLink
                 href='https://github.com/Jaeyoung-Kim-Dev'
