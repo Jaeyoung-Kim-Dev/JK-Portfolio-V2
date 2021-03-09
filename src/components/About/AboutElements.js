@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const backgroundLight = '#e6eaee';
-const topLine = '#01bf71';
+const topLine = '#0095ff';
 // const headingDark = '#f7f8fa';
 const headingLight = '#010606';
 // const subtitleDark = '#fff';

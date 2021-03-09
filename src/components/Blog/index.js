@@ -3,15 +3,14 @@ import Fade from 'react-reveal/Fade';
 import {
   BlogContainer,
   BlogWrapper,
-  BlogRow,
-  Column1,
   ImgWrap,
   Img,
-  Column2,
+  DetailWrapper,
   TopLine,
   Heading,
   Subtitle,
   BtnWrap,
+  TextWrapper,
   Button,
 } from './BlogElements';
 
@@ -20,16 +19,11 @@ const Blog = () => {
     <>
       <BlogContainer id={'blog'}>
         <BlogWrapper>
-          <BlogRow>
-            <Column1>
-              <ImgWrap>
-                <Img
-                  src={require('../../images/blog.jpg')?.default}
-                  alt={'me'}
-                />
-              </ImgWrap>
-            </Column1>
-            <Column2>
+          <ImgWrap>
+            <Img src={require('../../images/blog.jpg')?.default} alt={'me'} />
+          </ImgWrap>
+          <DetailWrapper>
+            <TextWrapper>
               <Fade right cascade>
                 <TopLine>Blog</TopLine>
                 <Heading>Learning something new!</Heading>
@@ -42,8 +36,8 @@ const Blog = () => {
                   <Button>Coming Soon!</Button>
                 </BtnWrap>
               </Fade>
-            </Column2>
-          </BlogRow>
+            </TextWrapper>
+          </DetailWrapper>
         </BlogWrapper>
       </BlogContainer>
     </>
