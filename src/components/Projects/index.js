@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import projects from './projects.json';
 import FilterModal from './FilterModal';
 import CarouselCard from './CarouselCard';
-import Table from './Table';
 import {
   ProjectsContainer,
   ProjectsH1,
