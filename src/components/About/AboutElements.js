@@ -79,7 +79,7 @@ export const Column2 = styled.div`
 
 export const ImgWrap = styled.div`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   /* margin-left: 15px; */
