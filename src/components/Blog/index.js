@@ -23,7 +23,6 @@ const Blog = () => {
           <BlogRow>
             <Column1>
               <ImgWrap>
-                {/* <Img src={img} alt={alt} /> */}
                 <Img
                   src={require('../../images/blog.jpg')?.default}
                   alt={'me'}
