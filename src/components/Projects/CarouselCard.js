@@ -34,7 +34,7 @@ const CarouselCard = (props) => {
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
     { width: 1700, itemsToShow: 5, itemsToScroll: 5 },
   ];
-
+//
   console.log(filteredProjects);
   return (
     <Carousel
