@@ -15,6 +15,7 @@ export const BlogContainer = styled.div`
   background: ${backgroundLight};
 
   /* @media screen and (max-width: 768px) {
+    margin ?
     padding: 50px 0;
   } ; */
 `;
