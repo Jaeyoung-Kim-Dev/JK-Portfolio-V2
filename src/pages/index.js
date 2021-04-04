@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 import About from '../components/About';
-// import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Blog from '../components/Blog';
 import Footer from '../components/Footer';
@@ -21,7 +20,6 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Hero />
       <About />
-      {/* <Skills /> */}
       <Projects />
       <Blog />
       <Footer />

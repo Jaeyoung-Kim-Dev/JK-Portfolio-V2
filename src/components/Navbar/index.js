@@ -11,12 +11,12 @@ import {
   NavBtnWrapper,
   NavBtn,
 } from './NavbarElements';
+import navItems from './navItems.json';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
-  const [navItems, setNavItems] = useState([]);
 
   const changeNav = () => {
     if (window.scrollY >= document.documentElement.clientHeight * 0.1) {
@@ -28,21 +28,14 @@ const Navbar = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNav);
-    fetch(`./JSON/navItems.json`)
-      .then((response) => response.json())
-      .then((result) => setNavItems(result));
   }, []);
-
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
 
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <Navlogo to='/' onClick={toggleHome}>
+            <Navlogo to='/' onClick={() => scroll.scrollToTop()}>
               JAEYOUNG KIM
             </Navlogo>
             <MobileIcon onClick={toggle}>

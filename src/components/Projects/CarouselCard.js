@@ -34,17 +34,16 @@ const CarouselCard = (props) => {
     { width: 1200, itemsToShow: 4, itemsToScroll: 4 },
     { width: 1700, itemsToShow: 5, itemsToScroll: 5 },
   ];
-//
-  console.log(filteredProjects);
+
   return (
     <Carousel
       breakPoints={breakPoints}
-      showArrows={filteredProjects.length}
-      pagination={filteredProjects.length}
+      showArrows={filteredProjects.length > 0}
+      pagination={filteredProjects.length > 0}
     >
       {filteredProjects.map((project, key) => (
-        <Fade right cascade>
-          <ProjectsCard key={key}>
+        <Fade right cascade key={key}>
+          <ProjectsCard>
             <ProjectsAdditional>
               <ProjectTitle>{project.name}</ProjectTitle>
               <ProjectsMoreInfo>
