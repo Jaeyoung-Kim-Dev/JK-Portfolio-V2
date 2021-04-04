@@ -13,7 +13,7 @@ import {
 import {
   FaGithub,
   FaLinkedin,
-  FaStackOverflow,
+  // FaStackOverflow,
   FaRegCopyright,
 } from 'react-icons/fa';
 
@@ -31,7 +31,7 @@ const Footer = () => {
               JK
             </SocialLogo>
             <WebsiteRights>
-              DEVELOPED BY JAEYOUNG KIM <FaRegCopyright />{' '}
+              DESIGNED AND DEVELOPED BY JAEYOUNG KIM <FaRegCopyright />{' '}
               {new Date().getFullYear()}
             </WebsiteRights>
 
@@ -50,13 +50,13 @@ const Footer = () => {
               >
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink
+              {/* <SocialIconLink
                 href='https://stackoverflow.com/users/13967287/jaeyoung-kim'
                 target='_blank'
                 arial-label='StackOverflow'
               >
                 <FaStackOverflow />
-              </SocialIconLink>
+              </SocialIconLink> */}
             </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>
