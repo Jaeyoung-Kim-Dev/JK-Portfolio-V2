@@ -17,7 +17,7 @@ import {
 const Blog = () => {
   return (
     <>
-      <BlogContainer id={'blog'}>
+      <BlogContainer id={'blogs'}>
         <BlogWrapper>
           <ImgWrap>
             <Img src={require('../../images/blog.jpg')?.default} alt={'me'} />
