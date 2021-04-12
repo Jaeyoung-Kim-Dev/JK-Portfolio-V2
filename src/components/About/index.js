@@ -64,13 +64,14 @@ const About = () => {
                 <TopLine>ABOUT</TopLine>
                 <Heading>Hello, everyone!</Heading>
                 <Subtitle>
-                  I have been in the IT field in Canada for more than 4 years.
-                  I'm knowledgeable at computer operating system, the network,
-                  and how to troubleshoot them.
+                  As a software developer, I'm self-motivated, cooperative, and
+                  a dedicated team player. I believe in solving a problem by
+                  good analysis and creativity to arrive at the best possible
+                  solution. I enjoy learning new things without fear or
+                  hesitation.
                 </Subtitle>
                 <Subtitle>
-                  I always eager to learn new skills, so I’m majoring in
-                  Software Development diploma at the{' '}
+                  Since starting my diploma in software development from{' '}
                   <Link
                     href='https://www.sait.ca/programs-and-courses/full-time-studies/diplomas/information-technology'
                     rel='noreferrer'
@@ -85,18 +86,12 @@ const About = () => {
                     target='_blank'
                   >
                     Calgary, AB, Canada
-                  </Link>{' '}
-                  now. This course is really interesting, and I am really
-                  enjoying it! My current <strong>GPA</strong> is{' '}
-                  <strong>3.89</strong>.
+                  </Link>
+                  , I studied hard (GPA 3.89) and did some personal and team
+                  projects.
                 </Subtitle>
-                <Subtitle>
-                  I will do my best and be a great software developer!
-                </Subtitle>
-                <Subtitle>
-                  PS. The course ends in April 2021, and if you want to hire me,
-                  please feel free to contact me. Thank you!
-                </Subtitle>
+                <Subtitle>I'm currently looking for a job! </Subtitle>
+                <Subtitle>Please feel free to contact me. Thank you!</Subtitle>
               </Fade>
             </Column2>
           </AboutRow>
