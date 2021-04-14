@@ -31,7 +31,7 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroH1>
-          I <HeroHeart /> Build
+          I <HeroHeart /> Building
         </HeroH1>
         <HeroAniWarpper>
           <HeroAniText>WEBSITES</HeroAniText>
