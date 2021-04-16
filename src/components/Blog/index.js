@@ -11,7 +11,7 @@ import {
   Subtitle,
   BtnWrap,
   TextWrapper,
-  Button,
+  ButtonA,
 } from './BlogElements';
 
 const Blog = () => {
@@ -31,9 +31,16 @@ const Blog = () => {
                   This blog is my knowledge of software development that I want
                   to share with others or something I want to remember.
                 </Subtitle>
+                <Subtitle>Check out my blog!</Subtitle>
                 <BtnWrap>
                   {/* <Button>View postings</Button> */}
-                  <Button>Coming Soon!</Button>
+                  <ButtonA
+                    href='https://jaeyoung-kim-dev.medium.com/react-application-without-redux-and-with-redux-cbb88853ad91'
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    MY BLOG
+                  </ButtonA>
                 </BtnWrap>
               </Fade>
             </TextWrapper>
