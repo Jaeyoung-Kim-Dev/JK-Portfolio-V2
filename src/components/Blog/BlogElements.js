@@ -119,7 +119,7 @@ export const BtnWrap = styled.div`
   justify-content: flex-start;
 `;
 
-export const Button = styled(Link)`
+export const ButtonS = styled(Link)`
   border-radius: 5px;
   background: #fff14f;
   box-shadow: inset 0 0 0 0 #0095ff;
@@ -134,6 +134,25 @@ export const Button = styled(Link)`
   justify-content: center;
   align-items: center;
   transition: ease-out 0.4s;
+
+  &:hover {
+    box-shadow: inset 300px 0 0 0 #0095ff;
+    color: #fff;
+  }
+`;
+
+export const ButtonA = styled.a`
+  border-radius: 5px;
+  background: #fff14f;
+  box-shadow: inset 0 0 0 0 #0095ff;
+  padding: 12px 30px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: ease-out 0.4s;
+  text-decoration: none;
 
   &:hover {
     box-shadow: inset 300px 0 0 0 #0095ff;
