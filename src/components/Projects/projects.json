@@ -1,5 +1,36 @@
 [
   {
+    "name": "Bakkatown Belize",
+    "img": "bakkatownbelize.svg",
+    "details": [
+      "Rebuilt a new hostel web app having a centralized booking management system plus a more user-friendly UI for their clients."
+    ],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": [
+      "NodeJS",
+      "Express",
+      "Socket",
+      "MongoDB",
+      "jQuery",
+      "Bootstrap"
+    ],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/bakkatown",
+    "link": ""
+  },
+  {
+    "name": "XML Parser",
+    "img": "xmlparser.svg",
+    "details": [
+      "Parsing XML files with my own Abstract Data Types (ADT) for a stack, queue, linked list and array list."
+    ],
+    "types": ["Data Structure", "Algorithm"],
+    "languages": ["Java"],
+    "technologies": ["Stack", "Queue", "LinkedList", "ArrayList", "JUnit"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/XML-Parser",
+    "link": ""
+  },
+  {
     "name": "Chat with Titanic",
     "img": "chatwithtitanic.svg",
     "details": [
