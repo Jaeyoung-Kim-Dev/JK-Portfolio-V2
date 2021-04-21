@@ -6,15 +6,8 @@
       "Rebuilt a new hostel web app having a centralized booking management system plus a more user-friendly UI for their clients."
     ],
     "types": ["Management"],
-    "languages": ["JavaScript"],
-    "technologies": [
-      "NodeJS",
-      "Express",
-      "Socket",
-      "MongoDB",
-      "jQuery",
-      "Bootstrap"
-    ],
+    "languages": ["JavaScript", "Java"],
+    "technologies": ["React", "Axios", "Spring Boot", "MySQL"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/bakkatown",
     "link": ""
   },
