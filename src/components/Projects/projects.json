@@ -24,6 +24,18 @@
     "link": ""
   },
   {
+    "name": "Sorting Out Sorting ",
+    "img": "sortingoutsorting.svg",
+    "details": [
+      "Sorting the three comparison types from large to small using six sort algorithms."
+    ],
+    "types": ["Algorithm"],
+    "languages": ["Java"],
+    "technologies": ["Sorting Algorithm", "CompareTo"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Sorting-Out-Sorting",
+    "link": ""
+  },
+  {
     "name": "Chat with Titanic",
     "img": "chatwithtitanic.svg",
     "details": [
