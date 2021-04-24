@@ -9,7 +9,7 @@
     "languages": ["JavaScript", "Java"],
     "technologies": ["React", "Axios", "Spring Boot", "MySQL"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/bakkatown",
-    "link": ""
+    "link": "http://ec2-3-138-184-79.us-east-2.compute.amazonaws.com:8080/#/"
   },
   {
     "name": "XML Parser",
