@@ -36,6 +36,19 @@
     "link": ""
   },
   {
+    "name": "Battleship Game",
+    "img": "battleship.svg",
+    "details": [
+      "Based on the battleship board game.",
+      "Two people can play the game remotely and in real time."
+    ],
+    "types": ["Game", "Chat"],
+    "languages": ["Java"],
+    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
+    "link": "https://youtu.be/SlMRXH7slQc"
+  },
+  {
     "name": "Chat with Titanic",
     "img": "chatwithtitanic.svg",
     "details": [
@@ -54,6 +67,7 @@
     "git": "https://github.com/Jaeyoung-Kim-Dev/chatwithtitanic",
     "link": "http://chatwithtitanic.jaeyoungkim.codes/"
   },
+
   {
     "name": "JK Sports Club",
     "img": "jksportsclub.svg",
@@ -66,19 +80,7 @@
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
     "link": "http://jksportsclub.jaeyoungkim.codes/"
   },
-  {
-    "name": "Battleship Game",
-    "img": "battleship.svg",
-    "details": [
-      "Based on the battleship board game.",
-      "Two people can play the game remotely and in real time."
-    ],
-    "types": ["Game", "Chat"],
-    "languages": ["Java"],
-    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
-    "link": "https://youtu.be/SlMRXH7slQc"
-  },
+
   {
     "name": "Manage Computers",
     "img": "managecomputers.svg",

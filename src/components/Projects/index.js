@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { FaFilter } from 'react-icons/fa';
-import Modal from 'react-modal';
 import projects from './projects.json';
 import FilterModal from './FilterModal';
 import CarouselCard from './CarouselCard';
@@ -17,8 +16,6 @@ import {
   ProjectSearchIcon,
 } from './ProjectsElements';
 import './style.css';
-
-Modal.setAppElement('#root');
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
