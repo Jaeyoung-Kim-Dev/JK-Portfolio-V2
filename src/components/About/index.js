@@ -88,10 +88,16 @@ const About = () => {
                     Calgary, AB, Canada
                   </Link>
                   , I studied hard (GPA 3.89) and did some personal and team
-                  projects.
+                  projects. You can check my projects below.
                 </Subtitle>
                 <Subtitle>I'm currently looking for a job! </Subtitle>
-                <Subtitle>Please feel free to contact me. Thank you!</Subtitle>
+                <Subtitle>
+                  Please feel free to{' '}
+                  <Link href="mailto:jaeyoung.kim.dev@gmail.com?subject=Mail from Jaeyoung's Website&body=Hello, Jaeyoung!">
+                    contact me
+                  </Link>
+                  . Thank you!
+                </Subtitle>
               </Fade>
             </Column2>
           </AboutRow>

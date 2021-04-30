@@ -66,17 +66,24 @@ export const HeroContent = styled.div`
   align-items: center;
 `;
 
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   letter-spacing: 0.5rem;
   word-spacing: 0.5rem;
+  margin: 1rem 1rem;
   font-family: 'Inconsolata', monospace;
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   @media screen and (max-width: 480px) {
@@ -86,7 +93,7 @@ export const HeroH1 = styled.h1`
 
 export const HeroHeart = styled(FaHeart)`
   color: red;
-  font-size: 3rem;
+  font-size: 2rem;
 
   @media screen and (max-width: 768px) {
     font-size: 2rem;
@@ -99,7 +106,7 @@ export const HeroHeart = styled(FaHeart)`
 
 export const HeroAniWarpper = styled.div`
   position: relative;
-  margin: 2rem;
+  margin: 2rem 0 6rem;
 
   &::before {
     content: '';
@@ -126,7 +133,7 @@ export const HeroAniWarpper = styled.div`
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
-    margin: 30px;
+    /* margin: 30px; */
   }
 
   @media screen and (max-width: 480px) {
@@ -177,7 +184,7 @@ export const HeroAniText = styled.h1`
 `;
 
 export const HeroP = styled.p`
-  margin-top: 24px;
+  margin: 0.5rem;
   color: #fff;
   font-size: 24px;
   text-align: center;
@@ -185,11 +192,6 @@ export const HeroP = styled.p`
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
   line-height: 250%;
-
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-    margin: 30px;
-  }
 
   @media screen and (max-width: 480px) {
     font-size: 18px;

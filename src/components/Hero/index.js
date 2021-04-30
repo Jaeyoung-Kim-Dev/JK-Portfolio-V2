@@ -4,6 +4,7 @@ import {
   HeroBg,
   VideoBg,
   HeroContent,
+  TextWrapper,
   HeroH1,
   HeroHeart,
   HeroAniWarpper,
@@ -16,7 +17,6 @@ import {
 } from './HeroElements';
 import Video from '../../videos/video.mp4';
 // import { Button } from '../ButtonElements';
-
 const Hero = () => {
   const [hover, setHover] = useState(false);
 
@@ -30,20 +30,27 @@ const Hero = () => {
         <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>
-          I <HeroHeart /> Building
-        </HeroH1>
+        <TextWrapper>
+          <HeroH1>
+            I <HeroHeart />
+          </HeroH1>
+          <HeroH1>BUILDING</HeroH1>
+        </TextWrapper>
         <HeroAniWarpper>
           <HeroAniText>WEBSITES</HeroAniText>
         </HeroAniWarpper>
-        <HeroP>My Name is JAEYOUNG KIM</HeroP>
+        {/* <br /> */}
+        <TextWrapper>
+          <HeroP>My Name is</HeroP>
+          <HeroP>JAEYOUNG KIM</HeroP>
+        </TextWrapper>
         <HeroBtnWrapper>
           <Button
             href="mailto:jaeyoung.kim.dev@gmail.com?subject=Mail from Jaeyoung's Website&body=Hello, Jaeyoung!"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
           >
-            Contact {hover ? <ArrowForward /> : <ArrowRight />}
+            CONTACT {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
