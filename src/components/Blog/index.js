@@ -17,7 +17,7 @@ import {
 const Blog = () => {
   return (
     <>
-      <BlogContainer id={'blogs'}>
+      <BlogContainer id={'blog'}>
         <BlogWrapper>
           <ImgWrap>
             <Img src={require('../../images/blog.jpg')?.default} alt={'me'} />
@@ -31,7 +31,7 @@ const Blog = () => {
                   This blog is my knowledge of software development that I want
                   to share with others or something I want to remember.
                 </Subtitle>
-                <Subtitle>Check out my blog!</Subtitle>
+                <Subtitle>Check out my posts!</Subtitle>
                 <BtnWrap>
                   {/* <Button>View postings</Button> */}
                   <ButtonA
