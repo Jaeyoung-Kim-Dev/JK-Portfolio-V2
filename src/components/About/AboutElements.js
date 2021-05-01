@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-const backgroundLight = '#e6eaee';
+const backgroundLight = '#051321';
 const topLine = '#0095ff';
 // const headingDark = '#f7f8fa';
-const headingLight = '#010606';
+const headingLight = '#cfe8e8';
 // const subtitleDark = '#fff';
-const subtitleLight = '#010606';
+const subtitleLight = '#cfe8e8';
 
 export const AboutContainer = styled.div`
   color: #fff;
@@ -97,8 +97,6 @@ export const Img = styled.img`
   cursor: pointer;
 `;
 
-export const BubbleWrapper = styled.div``;
-
 export const Bubble = styled.div`
   position: absolute;
   width: 170px;
@@ -155,6 +153,17 @@ export const Subtitle = styled.p`
 `;
 
 export const Link = styled.a`
-  color: #0006ff;
+  color: #ffc92d;
   text-decoration: none;
+`;
+
+export const TechWrapper = styled.div`
+  display: flex;
+
+  /* position: relative; */
+  /* flex-direction: column; */
+`;
+
+export const TechIconWrapper = styled.a`
+  padding: 1rem;
 `;
