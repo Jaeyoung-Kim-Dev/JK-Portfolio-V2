@@ -6,6 +6,7 @@ import {
   SocialMedia,
   SocialMediaWrap,
   SocialLogo,
+  WebsiteRightsWrapper,
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
@@ -28,13 +29,18 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>
-              JK
+              JAEYOUNG KIM
             </SocialLogo>
-            <WebsiteRights>
-              DESIGNED AND DEVELOPED BY JAEYOUNG KIM <FaRegCopyright />{' '}
-              {new Date().getFullYear()}
-            </WebsiteRights>
-
+            <WebsiteRightsWrapper>
+              <WebsiteRights>DESIGNED AND DEVELOPED BY</WebsiteRights>
+              <WebsiteRightsWrapper>
+                <WebsiteRights>JAEYOUNG KIM</WebsiteRights>
+                <WebsiteRights>
+                  <FaRegCopyright />
+                </WebsiteRights>
+                <WebsiteRights>{new Date().getFullYear()}</WebsiteRights>
+              </WebsiteRightsWrapper>
+            </WebsiteRightsWrapper>
             <SocialIcons>
               <SocialIconLink
                 href='https://github.com/Jaeyoung-Kim-Dev'
@@ -50,13 +56,6 @@ const Footer = () => {
               >
                 <FaLinkedin />
               </SocialIconLink>
-              {/* <SocialIconLink
-                href='https://stackoverflow.com/users/13967287/jaeyoung-kim'
-                target='_blank'
-                arial-label='StackOverflow'
-              >
-                <FaStackOverflow />
-              </SocialIconLink> */}
             </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>

@@ -10,7 +10,6 @@ import {
   Bubble,
   Img,
   Column2,
-  TopLine,
   Heading,
   Subtitle,
   Link,
@@ -84,14 +83,14 @@ const About = () => {
                     rel='noreferrer'
                     target='_blank'
                   >
-                    Calgary, AB, Canada
+                    Calgary
                   </Link>
                   , I studied hard (GPA 3.89) and won an award and a
                   scholarship.
                 </Subtitle>
                 <Subtitle>
-                  The technologies below are the ones I'm interested in and use
-                  these days.
+                  The technologies below are what I've been working with these
+                  days.
                 </Subtitle>
                 <TechWrapper>
                   <TechIconWrapper
@@ -141,14 +140,6 @@ const About = () => {
                     />
                   </TechIconWrapper>
                 </TechWrapper>
-                {/* <Subtitle>I'm currently looking for a job! </Subtitle>
-                <Subtitle>
-                  Please feel free to{' '}
-                  <Link href="mailto:jaeyoung.kim.dev@gmail.com?subject=Mail from Jaeyoung's Website&body=Hello, Jaeyoung!">
-                    contact me
-                  </Link>
-                  . Thank you!
-                </Subtitle> */}
               </Fade>
             </Column2>
           </AboutRow>

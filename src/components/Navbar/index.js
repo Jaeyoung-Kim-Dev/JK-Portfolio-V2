@@ -50,7 +50,7 @@ const Navbar = ({ toggle }) => {
                     duration={500}
                     spy={true}
                     exact='true'
-                    offset={-document.documentElement.clientHeight * 0.1}
+                    offset={-document.documentElement.clientHeight * 0.096}
                   >
                     {navItem.itemName}
                   </NavLinks>

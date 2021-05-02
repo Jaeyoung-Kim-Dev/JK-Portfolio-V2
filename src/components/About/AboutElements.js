@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 
-const backgroundLight = '#051321';
-const topLine = '#0095ff';
-// const headingDark = '#f7f8fa';
-const headingLight = '#cfe8e8';
-// const subtitleDark = '#fff';
-const subtitleLight = '#cfe8e8';
+const background = '#051321';
+const heading = '#cfe8e8';
+const subtitle = '#cfe8e8';
 
 export const AboutContainer = styled.div`
   color: #fff;
-  background: ${backgroundLight};
+  background: ${background};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,17 +47,7 @@ export const AboutRow = styled.div`
 `;
 
 export const Column1 = styled.div`
-  /* margin-bottom: 15px; */
-  /* padding: 60px; */
   grid-area: col1;
-
-  /* @media screen and (max-width: 768px) {
-    padding: 40px;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 20px;
-  } ; */
 `;
 
 export const Column2 = styled.div`
@@ -122,22 +109,12 @@ export const Bubble = styled.div`
   }
 `;
 
-export const TopLine = styled.p`
-  color: ${topLine};
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-`;
-
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${headingLight};
+  color: ${heading};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -149,7 +126,7 @@ export const Subtitle = styled.p`
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 24px;
-  color: ${subtitleLight};
+  color: ${subtitle};
 `;
 
 export const Link = styled.a`
@@ -164,5 +141,4 @@ export const TechWrapper = styled.div`
 
 export const TechIconWrapper = styled.a`
   padding: 0.5rem;
-  /* background: #fff; */
 `;

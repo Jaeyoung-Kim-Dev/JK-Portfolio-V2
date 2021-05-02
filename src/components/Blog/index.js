@@ -25,7 +25,6 @@ const Blog = () => {
           <DetailWrapper>
             <TextWrapper>
               <Fade right cascade>
-                <TopLine>Blog</TopLine>
                 <Heading>Learning something new!</Heading>
                 <Subtitle>
                   This blog is my knowledge of software development that I want
