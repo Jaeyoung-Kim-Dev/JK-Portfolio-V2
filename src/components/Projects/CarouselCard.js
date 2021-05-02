@@ -49,6 +49,7 @@ const CarouselCard = (props) => {
               <ProjectsMoreInfo>
                 <ProjectsIcon
                   src={require(`../../images/projects/${project.img}`)?.default}
+                  // style={{ color: '#fff' }}
                   alt={project.name}
                 />
                 <ProjectCoords>
