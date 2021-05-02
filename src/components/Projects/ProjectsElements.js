@@ -10,7 +10,7 @@ export const ProjectsContainer = styled.div`
   justify-content: center;
   /* align-items: center; */
   /* background: #e6eaee; */
-  background: #0a0620;
+  background: #030015;
 
   /* @media screen and (max-width: 768px) {
     height: auto;

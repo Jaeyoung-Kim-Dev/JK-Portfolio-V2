@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-const backgroundLight = '#e6eaee';
+const backgroundLight = '#051321';
 // const backgroundDark = '#0a0620';
 const topLine = '#0095ff';
 // const headingDark = '#f7f8fa';
-const headingLight = '#010606';
+const headingLight = '#cfe8e8';
 // const subtitleDark = '#fff';
-const subtitleLight = '#010606';
+const subtitleLight = '#cfe8e8';
 // const btnBgDark = '#01BF71';
 
 export const BlogContainer = styled.div`
