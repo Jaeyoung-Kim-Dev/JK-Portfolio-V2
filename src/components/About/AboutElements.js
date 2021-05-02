@@ -159,11 +159,10 @@ export const Link = styled.a`
 
 export const TechWrapper = styled.div`
   display: flex;
-
-  /* position: relative; */
-  /* flex-direction: column; */
+  justify-content: space-between;
 `;
 
 export const TechIconWrapper = styled.a`
-  padding: 1rem;
+  padding: 0.5rem;
+  /* background: #fff; */
 `;
