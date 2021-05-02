@@ -53,8 +53,10 @@ export const ProjectsCardWrapper = styled.div`
 export const ProjectsCard = styled.div`
   width: 280px;
   height: 420px;
+  color: #fff;
   background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
+  /* background: linear-gradient(#f8f8f8, #fff); */
+  background: #175282;
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   overflow: hidden;
@@ -72,8 +74,11 @@ export const ProjectsCard = styled.div`
 `;
 
 export const ProjectsIcon = styled.img`
+  margin: 5px;
   height: 60px;
   width: 60px;
+  filter: invert(99%) sepia(1%) saturate(5%) hue-rotate(14deg) brightness(101%)
+    contrast(101%);
 `;
 
 export const ProjectsH1 = styled.h1`
@@ -118,13 +123,14 @@ export const ProjectLangWrapper = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   justify-content: center;
+  margin-bottom: 5px;
 
-  &::after {
+  /* &::after {
     content: '';
     width: 100%;
     margin: 5px;
     border: 1px solid #fff;
-  }
+  } */
 `;
 
 export const ProjectType = styled.li`
@@ -132,9 +138,9 @@ export const ProjectType = styled.li`
   border-color: none;
   padding: 4px 10px;
   margin: 5px;
-  background: #8ebeef;
+  background: #00223d;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 `;
 
 export const ProjectLang = styled.li`
@@ -230,7 +236,7 @@ export const ProjectsAdditional = styled.div`
   width: 100%;
   height: 80px;
   align-items: center;
-  background: #4296ea; //linear-gradient(#de685e, #ee786e); */
+  background: #00223d; //linear-gradient(#de685e, #ee786e); */
   transition: height 0.4s;
   overflow: hidden;
   z-index: 2;
