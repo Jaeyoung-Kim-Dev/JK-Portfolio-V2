@@ -354,6 +354,27 @@ export const LangListWrapper = styled.div`
   }
 `;
 
+export const TechListWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  height: 5rem;
+
+  &::after {
+    content: '';
+    width: 100%;
+    margin: 5px;
+    border: 1px solid #fff;
+  }
+  /* max-width: 80vw; */
+
+  @media screen and (max-width: 480px) {
+    max-width: 100vw;
+  }
+`;
+
 export const LangList = styled.div`
   /* background: #000; */
   background: #fff;
