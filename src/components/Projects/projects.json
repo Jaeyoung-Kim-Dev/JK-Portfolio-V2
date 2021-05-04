@@ -12,6 +12,19 @@
     "link": "http://ec2-3-138-184-79.us-east-2.compute.amazonaws.com:8080/#/"
   },
   {
+    "name": "Battleship Game",
+    "img": "battleship.svg",
+    "details": [
+      "Based on the battleship board game.",
+      "Two people can play the game remotely and in real time."
+    ],
+    "types": ["Game", "Chat"],
+    "languages": ["Java"],
+    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
+    "link": "https://youtu.be/bTxTnOdCqcQ"
+  },
+  {
     "name": "XML Parser",
     "img": "xmlparser.svg",
     "details": [
@@ -35,19 +48,7 @@
     "git": "https://github.com/Jaeyoung-Kim-Dev/Sorting-Out-Sorting",
     "link": ""
   },
-  {
-    "name": "Battleship Game",
-    "img": "battleship.svg",
-    "details": [
-      "Based on the battleship board game.",
-      "Two people can play the game remotely and in real time."
-    ],
-    "types": ["Game", "Chat"],
-    "languages": ["Java"],
-    "technologies": ["JavaFX", "Multi-Thread", "Socket"],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/Battleship-Game",
-    "link": "https://youtu.be/bTxTnOdCqcQ"
-  },
+
   {
     "name": "Chat in Titanic",
     "img": "chatintitanic.svg",

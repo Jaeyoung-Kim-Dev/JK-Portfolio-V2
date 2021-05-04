@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import projects from './projects.json';
 import {
   LangListWrapper,
-  TechListWrapper,
   LangList,
   ProjectsH1,
   ModalCloseButton,
@@ -35,8 +34,9 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap',
+    width: '95vw',
     maxWidth: '600px',
+    maxHeight: '90vh',
     background: '#00223D',
     borderRadius: '10px',
   },
@@ -124,7 +124,7 @@ const FilterModal = (props) => {
           ))}
         </LangListWrapper>
         <ProjectsP>Technology:</ProjectsP>
-        <TechListWrapper>
+        <LangListWrapper>
           {technologies.map((lang, key) => (
             <LangList
               key={key}
@@ -134,7 +134,7 @@ const FilterModal = (props) => {
               {lang}
             </LangList>
           ))}
-        </TechListWrapper>
+        </LangListWrapper>
       </Zoom>
     </Modal>
   );
