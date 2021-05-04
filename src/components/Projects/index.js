@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
+import { ProjectContext } from '../../ProjectContext';
 import { FaFilter } from 'react-icons/fa';
 import projects from './projects.json';
-import FilterModal from './FilterModal';
+// import FilterModal from './FilterModal';
 import CarouselCard from './CarouselCard';
 import {
   ProjectsContainer,
@@ -18,13 +19,21 @@ import {
 import './style.css';
 
 const Projects = () => {
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [filterLang, setFilterLang] = useState('All');
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const searchField = useRef();
+  const {
+    filteredProjects,
+    setFilteredProjects,
+    filterLang,
+    setFilterLang,
+    setIsModalOpen,
+    searchField,
+  } = useContext(ProjectContext);
+  // const [filteredProjects, setFilteredProjects] = useState(projects);
+  // const [filterLang, setFilterLang] = useState('All');
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const searchField = useRef();
 
   function openModal() {
-    setIsOpen(true);
+    setIsModalOpen(true);
     document.body.style.overflow = 'hidden'; // prevent background scrolling when modal open
   }
 
@@ -68,14 +77,14 @@ const Projects = () => {
           >
             <FaFilter /> {filterLang ? '' + filterLang : ' All'}
           </ProjectFilterButtonWrapper>
-          <FilterModal
+          {/* <FilterModal
             setFilteredProjects={setFilteredProjects}
-            modalIsOpen={modalIsOpen}
-            setIsOpen={setIsOpen}
+            isModalOpen={isModalOpen}
+            setIsOpen={setIsModalOpen}
             filterLang={filterLang}
             setFilterLang={setFilterLang}
             searchField={searchField}
-          />
+          /> */}
           <ProjectSearchWrapper>
             <ProjectSearchBar
               type={'text'}

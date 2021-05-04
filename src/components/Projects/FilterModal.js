@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import Modal from 'react-modal';
+import { ProjectContext } from '../../ProjectContext';
 import projects from './projects.json';
 import {
   LangListWrapper,
@@ -27,6 +28,7 @@ projects.forEach((project) => {
 
 const customStyles = {
   content: {
+    // position: 'absolute',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -39,22 +41,22 @@ const customStyles = {
     maxWidth: '600px',
     background: '#00223D',
     borderRadius: '10px',
-    zIndex: 999,
   },
+  overlay: { zIndex: 1000 },
 };
 
 Modal.setAppElement('#root');
 
-const FilterModal = (props) => {
+const FilterModal = () => {
   // const [filterLang, setFilterLang] = useState();
   const {
     setFilteredProjects,
-    modalIsOpen,
-    setIsOpen,
+    isModalOpen,
+    setIsModalOpen,
     filterLang,
     setFilterLang,
     searchField,
-  } = props;
+  } = useContext(ProjectContext);
 
   const filterLangHandler = (lang) => {
     setFilterLang(lang);
@@ -74,13 +76,13 @@ const FilterModal = (props) => {
   };
 
   function closeModal() {
-    setIsOpen(false);
+    setIsModalOpen(false);
     document.body.style.overflow = 'unset'; // allow scrolling once modal close
   }
 
   return (
     <Modal
-      isOpen={modalIsOpen}
+      isOpen={isModalOpen}
       // onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
       style={customStyles}
