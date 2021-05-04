@@ -51,8 +51,8 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
-  padding: 50px;
   grid-area: col2;
+  padding: 50px;
   max-width: 600px;
 
   @media screen and (max-width: 1000px) {

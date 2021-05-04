@@ -1,97 +1,87 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-const backgroundLight = '#051321';
-// const backgroundDark = '#0a0620';
-const topLine = '#0095ff';
-// const headingDark = '#f7f8fa';
-const headingLight = '#cfe8e8';
-// const subtitleDark = '#fff';
-const subtitleLight = '#cfe8e8';
-// const btnBgDark = '#01BF71';
+const background = '#051321';
+const heading = '#cfe8e8';
+const subtitle = '#cfe8e8';
 
 export const BlogContainer = styled.div`
   color: #fff;
-  background: ${backgroundLight};
+  background: ${background};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  /* @media screen and (max-width: 768px) {
-    margin ?
-    padding: 50px 0;
-  } ; */
+  @media screen and (max-width: 1000px) {
+    /* padding-top: 80px; */
+  } ;
 `;
 
 export const BlogWrapper = styled.div`
-  /* display: grid; */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   z-index: 1;
   height: 90vh;
   min-height: 800px;
-  max-height: 950px;
+  max-height: 1050px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
   justify-content: center;
-  align-items: center;
 
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1000px) {
+    min-height: 700px;
     height: auto;
-    padding: 0;
-    min-height: 0;
   } ;
 `;
 
-export const DetailWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const BlogRow = styled.div`
+  display: grid;
+  /* grid-auto-columns: minmax(auto, 1fr); */
+  grid-template-columns: auto auto;
   align-items: center;
+  grid-template-areas: 'col1 col2';
+
+  @media screen and (max-width: 1000px) {
+    grid-template-areas: 'col1' 'col2';
+  } ;
 `;
 
-export const TextWrapper = styled.div`
-  max-width: 455px;
-  height: 100%;
-  padding: 20px;
+export const Column1 = styled.div`
+  grid-area: col1;
+`;
 
-  @media screen and (max-width: 768px) {
-    padding: 40px;
-    height: auto;
+export const Column2 = styled.div`
+  grid-area: col2;
+  padding: 50px;
+  max-width: 600px;
+
+  @media screen and (max-width: 1000px) {
+    padding: 30px;
   }
 
   @media screen and (max-width: 480px) {
-    padding: 30px;
-  }
+    padding: 20px;
+  } ;
 `;
 
 export const ImgWrap = styled.div`
-  max-width: 455px;
-  height: 100%;
-  padding: 20px;
-  align-items: center;
+  width: 100%;
+  /* max-width: 455px; */
   display: flex;
-  margin-right: 5vw;
+  justify-content: center;
 
-  @media screen and (max-width: 768px) {
-    height: auto;
-    margin-right: 0;
-  }
+  @media screen and (max-width: 1000px) {
+    padding: 50px 10px 10px;
+  } ;
 `;
 
 export const Img = styled.img`
-  width: 100%;
+  width: 90vw;
+  max-width: 350px;
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
-`;
-
-export const TopLine = styled.p`
-  color: ${topLine};
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
 `;
 
 export const Heading = styled.h1`
@@ -99,7 +89,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${headingLight};
+  color: ${heading};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -111,7 +101,7 @@ export const Subtitle = styled.p`
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 24px;
-  color: ${subtitleLight};
+  color: ${subtitle};
 `;
 
 export const BtnWrap = styled.div`

@@ -3,14 +3,14 @@ import Fade from 'react-reveal/Fade';
 import {
   BlogContainer,
   BlogWrapper,
+  BlogRow,
   ImgWrap,
   Img,
-  DetailWrapper,
-  TopLine,
+  Column1,
+  Column2,
   Heading,
   Subtitle,
   BtnWrap,
-  TextWrapper,
   ButtonA,
 } from './BlogElements';
 
@@ -19,11 +19,16 @@ const Blog = () => {
     <>
       <BlogContainer id={'blog'}>
         <BlogWrapper>
-          <ImgWrap>
-            <Img src={require('../../images/blog.jpg')?.default} alt={'me'} />
-          </ImgWrap>
-          <DetailWrapper>
-            <TextWrapper>
+          <BlogRow>
+            <Column1>
+              <ImgWrap>
+                <Img
+                  src={require('../../images/blog.jpg')?.default}
+                  alt={'me'}
+                />
+              </ImgWrap>
+            </Column1>
+            <Column2>
               <Fade right cascade>
                 <Heading>Learning something new!</Heading>
                 <Subtitle>
@@ -32,7 +37,6 @@ const Blog = () => {
                 </Subtitle>
                 <Subtitle>Check out my posts!</Subtitle>
                 <BtnWrap>
-                  {/* <Button>View postings</Button> */}
                   <ButtonA
                     href='https://jaeyoung-kim-dev.medium.com/react-application-without-redux-and-with-redux-cbb88853ad91'
                     rel='noreferrer'
@@ -42,8 +46,8 @@ const Blog = () => {
                   </ButtonA>
                 </BtnWrap>
               </Fade>
-            </TextWrapper>
-          </DetailWrapper>
+            </Column2>
+          </BlogRow>
         </BlogWrapper>
       </BlogContainer>
     </>

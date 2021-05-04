@@ -12,10 +12,11 @@ export const ProjectsContainer = styled.div`
   /* background: #e6eaee; */
   background: #030015;
 
-  /* @media screen and (max-width: 768px) {
-    height: auto;
-    padding-top: 5vh;
-  } */
+  @media screen and (max-width: 768px) {
+    min-height: 95vh;
+    /* padding-bottom: 0; */
+    padding: 10vh 0;
+  }
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -86,8 +87,13 @@ export const ProjectsH1 = styled.h1`
   text-align: center;
   /* color: #000; */
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem;
   position: relative;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ProjectsP = styled.p`
@@ -364,23 +370,31 @@ export const LangList = styled.div`
   text-align: center;
   /* cursor: pointer; */
   background: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
-  transform: ${({ filterLang }) => (filterLang ? 'scale(1.2)' : '')};
+  /* transform: ${({ filterLang }) => (filterLang ? 'scale(1.1)' : '')}; */
 
   &:hover {
     /* transform: scale(1.2); */
     background: #8ebeef;
+    transform: scale(1.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
 `;
 
 export const ModalCloseButton = styled.div`
-  right: 20px;
-  top: 10px;
-  font-size: 2rem;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
   position: absolute;
   color: #fff;
   cursor: pointer;
+  background: #8c0000;
+  /* border: 1px solid #a2a2a2; */
+  border-radius: 20px;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
 `;
 
 export const LangFilterAll = styled.div`
