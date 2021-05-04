@@ -36,7 +36,7 @@ const customStyles = {
     flexDirection: 'column',
     width: '95vw',
     maxWidth: '600px',
-    maxHeight: '90vh',
+    maxHeight: '80vh',
     background: '#00223D',
     borderRadius: '10px',
   },
