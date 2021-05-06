@@ -12,6 +12,18 @@
     "link": "http://ec2-3-138-184-79.us-east-2.compute.amazonaws.com:8080/#/"
   },
   {
+    "name": "HOMEnVentory",
+    "img": "homenventory.svg",
+    "details": [
+      "Homeowners keep track of their inventory of household items for insurance purposes."
+    ],
+    "types": ["Management"],
+    "languages": ["Java"],
+    "technologies": ["JSP", "Servlet", "MySQL", "JPA", "JDBC"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/HOMEnVentory",
+    "link": ""
+  },
+  {
     "name": "Battleship Game",
     "img": "battleship.svg",
     "details": [
