@@ -60,7 +60,18 @@
     "git": "https://github.com/Jaeyoung-Kim-Dev/Sorting-Out-Sorting",
     "link": ""
   },
-
+  {
+    "name": "JK Sports Club",
+    "img": "jksportsclub.svg",
+    "details": [
+      "Web application that provides information about sports clubs, manages reviews, and adds, modifies and deletes membership information."
+    ],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["React", "NodeJS", "Express", "MongoDB", "Bootstrap"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
+    "link": "http://jksportsclub.jaeyoungkim.codes/"
+  },
   {
     "name": "Chat in Titanic",
     "img": "chatintitanic.svg",
@@ -80,20 +91,6 @@
     "git": "https://github.com/Jaeyoung-Kim-Dev/chatwithtitanic",
     "link": "http://chatwithtitanic.jaeyoungkim.codes/"
   },
-
-  {
-    "name": "JK Sports Club",
-    "img": "jksportsclub.svg",
-    "details": [
-      "The website is to manage sports club information, reviews and members."
-    ],
-    "types": ["Management"],
-    "languages": ["JavaScript"],
-    "technologies": ["React", "NodeJS", "Express", "MongoDB", "Bootstrap"],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
-    "link": "http://jksportsclub.jaeyoungkim.codes/"
-  },
-
   {
     "name": "Manage Computers",
     "img": "managecomputers.svg",
