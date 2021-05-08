@@ -70,7 +70,7 @@
     "languages": ["JavaScript"],
     "technologies": ["React", "NodeJS", "Express", "MongoDB", "Bootstrap"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/jksportsclub",
-    "link": "http://jksportsclub.jaeyoungkim.codes/"
+    "link": ""
   },
   {
     "name": "Chat in Titanic",
@@ -88,8 +88,8 @@
       "jQuery",
       "Bootstrap"
     ],
-    "git": "https://github.com/Jaeyoung-Kim-Dev/chatwithtitanic",
-    "link": "http://chatwithtitanic.jaeyoungkim.codes/"
+    "git": "https://github.com/Jaeyoung-Kim-Dev/ChatInTitanic",
+    "link": ""
   },
   {
     "name": "Manage Computers",
