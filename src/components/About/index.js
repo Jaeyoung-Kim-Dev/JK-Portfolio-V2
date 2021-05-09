@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
+import technologies from './technologies.json';
 import {
   AboutContainer,
   AboutWrapper,
@@ -15,6 +16,7 @@ import {
   Link,
   TechWrapper,
   TechIconWrapper,
+  TechIcon,
 } from './AboutElements';
 
 const bubbles = [
@@ -93,52 +95,11 @@ const About = () => {
                   days.
                 </Subtitle>
                 <TechWrapper>
-                  <TechIconWrapper
-                    href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-                    target='_blank'
-                  >
-                    <img
-                      src='https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'
-                      alt='javascript'
-                      width='40'
-                      height='40'
-                    />
-                  </TechIconWrapper>
-                  <TechIconWrapper
-                    href='https://www.typescriptlang.org/'
-                    target='_blank'
-                  >
-                    <img
-                      src='https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
-                      alt='typescript'
-                      width='40'
-                      height='40'
-                    />
-                  </TechIconWrapper>
-                  <TechIconWrapper href='https://reactjs.org/' target='_blank'>
-                    <img
-                      src='https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg'
-                      alt='react'
-                      width='40'
-                      height='40'
-                    />
-                  </TechIconWrapper>
-                  <TechIconWrapper href='https://nodejs.org' target='_blank'>
-                    <img
-                      src='https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg'
-                      alt='nodejs'
-                      width='40'
-                      height='40'
-                    />
-                  </TechIconWrapper>
-                  <TechIconWrapper href='https://www.java.com' target='_blank'>
-                    <img
-                      src='https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg'
-                      alt='java'
-                      width='40'
-                      height='40'
-                    />
-                  </TechIconWrapper>
+                  {technologies.map((tech, key) => (
+                    <TechIconWrapper key={key} href={tech.link} target='_blank'>
+                      <TechIcon src={tech.imgLink} alt={tech.name} />
+                    </TechIconWrapper>
+                  ))}
                 </TechWrapper>
               </Fade>
             </Column2>

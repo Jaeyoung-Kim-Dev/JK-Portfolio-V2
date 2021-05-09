@@ -142,3 +142,8 @@ export const TechWrapper = styled.div`
 export const TechIconWrapper = styled.a`
   padding: 0.5rem;
 `;
+
+export const TechIcon = styled.img`
+  width: 40px;
+  height: 40px;
+`;
