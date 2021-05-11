@@ -128,5 +128,18 @@
     "technologies": ["TypeScript", "NodeJS"],
     "git": "https://github.com/Jaeyoung-Kim-Dev/Typescript-Blockchain.git",
     "link": ""
+  },
+  {
+    "name": "Linked List Implement",
+    "img": "linkedlistimplement.svg",
+    "details": [
+      "Implemented Linked List from abstract data type(ADT).",
+      "Tested it including serialization."
+    ],
+    "types": ["Data Structure"],
+    "languages": ["Java"],
+    "technologies": ["LinkedList", "JUnit"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/Linked-List-Implementation",
+    "link": ""
   }
 ]
