@@ -92,11 +92,23 @@
     "link": ""
   },
   {
+    "name": "Expense Tracker",
+    "img": "expensetracker.svg",
+    "details": [
+      "Web application that magnages expense to view the balance, total amount of income/expense, history of expense and add/delete a new transaction."
+    ],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["React"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/expense-tracker-react",
+    "link": "https://expense-tracker-jaeyoung-kim-dev.netlify.app/"
+  },
+  {
     "name": "Manage Computers",
     "img": "managecomputers.svg",
     "details": [
       "CLI(Command-Line Interface) based program for managing computers.",
-      "Various Java security technologies are applied"
+      "Various Java security technologies are applied."
     ],
     "types": ["Security"],
     "languages": ["Java"],
