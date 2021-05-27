@@ -92,10 +92,22 @@
     "link": ""
   },
   {
+    "name": "Meetup",
+    "img": "meetup.svg",
+    "details": [
+      "Web application that displays all meetups, creates a new meetup and adds meetups to favorites."
+    ],
+    "types": ["Management"],
+    "languages": ["JavaScript"],
+    "technologies": ["React", "Firebase"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/meetup-react",
+    "link": "https://meetup-react.netlify.app/"
+  },
+  {
     "name": "Expense Tracker",
     "img": "expensetracker.svg",
     "details": [
-      "Web application that magnages expense to view the balance, total amount of income/expense, history of expense and add/delete a new transaction."
+      "Web application that magnages expense to view the balance, total amount of income/expense, history of expense and add/delete a transaction."
     ],
     "types": ["Management"],
     "languages": ["JavaScript"],
