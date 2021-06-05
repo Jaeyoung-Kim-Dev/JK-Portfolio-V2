@@ -1,3 +1,9 @@
+<h1 align="center">Welcome to my second portfolio 👋</h1>
+
+## What project is it?
+
+> This is my second portfolio.
+
 ## Author
 
 👤 **Jaeyoung Kim**
