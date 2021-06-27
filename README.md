@@ -2,7 +2,7 @@
 
 ## What project is it?
 
-> This is my second portfolio.
+> This is my second version of portfolio.
 
 ## Author
 
