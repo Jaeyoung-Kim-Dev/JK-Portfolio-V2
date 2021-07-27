@@ -186,6 +186,7 @@ export const ProjectFilterButtonWrapper = styled.div`
   padding: 10px 10px 5px 10px;
   cursor: pointer;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.2);
@@ -371,6 +372,7 @@ export const LangList = styled.div`
   /* cursor: pointer; */
   background: ${({ filterLang }) => (filterLang ? '#8ebeef' : '#fff')};
   /* transform: ${({ filterLang }) => (filterLang ? 'scale(1.1)' : '')}; */
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     /* transform: scale(1.2); */

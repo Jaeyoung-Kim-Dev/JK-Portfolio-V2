@@ -13,7 +13,7 @@ import {
 import './style.css';
 
 let types = [];
-let languages = ['JavaScript', 'Java'];
+let languages = ['JavaScript', 'TypeScript', 'Java'];
 let technologies = ['React', 'NodeJS', 'TypeScript', 'Express', 'NestJS']; // priority languages
 projects.forEach((project) => {
   Array.prototype.push.apply(types, project['types']); //merge objects in array

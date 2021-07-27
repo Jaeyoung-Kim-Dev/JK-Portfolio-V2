@@ -64,11 +64,11 @@ const About = () => {
                 {/* <TopLine>ABOUT</TopLine> */}
                 <Heading>Hello, everyone!</Heading>
                 <Subtitle>
-                  As a software developer, I'm self-motivated, cooperative, and
-                  a dedicated team player. I believe in solving a problem by
-                  good analysis and creativity to arrive at the best possible
-                  solution. I enjoy learning new things without fear or
-                  hesitation.
+                  As a software developer, I like to view myself as
+                  self-motivated, cooperative, well organized, and a dedicated
+                  team player. Solving a challenging problem fuels me. Using
+                  both sides of my brain can be challenging but trying to
+                  improve my creative and analytical skills.
                 </Subtitle>
                 <Subtitle>
                   Since starting my diploma in software development from{' '}
@@ -87,7 +87,7 @@ const About = () => {
                   >
                     Calgary
                   </Link>
-                  , I studied hard (GPA 3.89) and won an award and a
+                  , I studied hard (GPA 3.84) and won an award and a
                   scholarship.
                 </Subtitle>
                 <Subtitle>

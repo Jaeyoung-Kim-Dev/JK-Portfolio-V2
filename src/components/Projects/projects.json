@@ -1,5 +1,40 @@
 [
   {
+    "name": "Baking Bunny Bakery",
+    "img": "bakingbunnybakery.png",
+    "details": [
+      "In progress:",
+      "Designed and developed an e-commerce web application optimized for all cross-browser for clients."
+    ],
+    "types": ["E-commerce"],
+    "languages": ["JavaScript", "TypeScript"],
+    "technologies": [
+      "React",
+      "Redux",
+      ".Net Core",
+      "MySQL",
+      "Docker",
+      "AWS",
+      "REST API",
+      "Agile"
+    ],
+    "git": "https://github.com/BakingBunny/web-baking-bunny",
+    "link": "https://bakingbunny.netlify.app/"
+  },
+  {
+    "name": "SkipTheDishes Clone",
+    "img": "skipthedishesclone.png",
+    "details": [
+      "In progress:",
+      "Cloning all possible designs and functionality to equal the SkipTheDishes website."
+    ],
+    "types": ["E-commerce"],
+    "languages": ["JavaScript", "TypeScript"],
+    "technologies": ["React", "Redux", "SASS"],
+    "git": "https://github.com/Jaeyoung-Kim-Dev/skip-the-dishes-clone",
+    "link": "https://skipthedishes.netlify.app/"
+  },
+  {
     "name": "Bakkatown Belize",
     "img": "bakkatownbelize.svg",
     "details": [
@@ -7,7 +42,14 @@
     ],
     "types": ["Management"],
     "languages": ["JavaScript", "Java"],
-    "technologies": ["React", "Axios", "Spring Boot", "MySQL"],
+    "technologies": [
+      "React",
+      "Axios",
+      "Spring Boot",
+      "MySQL",
+      "AWS",
+      "REST API"
+    ],
     "git": "https://github.com/Jaeyoung-Kim-Dev/bakkatown",
     "link": "http://ec2-3-138-184-79.us-east-2.compute.amazonaws.com:8080/#/"
   },
