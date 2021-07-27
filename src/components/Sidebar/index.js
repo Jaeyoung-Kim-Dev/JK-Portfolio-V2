@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, toggle }) => (
       </SidebarMenu>
       <SideBtnWrap>
         <a
-          href={require('../../Resume(Jaeyoung_Kim).pdf')?.default}
+          href={require('../../Resume_Jaeyoung_Kim.pdf')?.default}
           target='_blank'
           rel='noopener noreferrer'
           download
